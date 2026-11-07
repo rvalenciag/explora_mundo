@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@500;600;700&family=Outfit:wght@500;600;700;800&display=swap");
+
+/* Design tokens shared by every component. */
+:root {
+    --color-page: #edf5ff;
+    --color-surface: #ffffff;
+    --color-text: #17345b;
+    --color-text-strong: #11243f;
+    --color-muted: #6e86a2;
+    --color-primary: #2767e8;
+    --color-primary-dark: #1848af;
+    --color-navy: #203f91;
+    --color-line: #cfdeef;
+
+    --font-body: "DM Sans", sans-serif;
+    --font-ui: Inter, sans-serif;
+    --font-heading: Outfit, sans-serif;
+
+    --font-size-xs: 11px;
+    --font-size-sm: 13px;
+    --font-size-md: 15px;
+    --font-size-lg: 18px;
+    --font-size-xl: 22px;
+    --font-size-2xl: 26px;
+    --font-size-page: 30px;
+
+    --radius-sm: 7px;
+    --radius-md: 11px;
+    --radius-lg: 15px;
+    --radius-xl: 18px;
+    --header-height: 65px;
+
+    --shadow-card: 0 5px 12px rgba(38, 65, 101, 0.12);
+    --shadow-float: 0 12px 26px rgba(35, 75, 135, 0.1);
+
+    /* Legacy aliases are kept while components are progressively migrated. */
+    --navy: var(--color-navy);
+    --blue: var(--color-primary);
+    --blue-dark: var(--color-primary-dark);
+    --sky: #e9f3ff;
+    --line: var(--color-line);
+    --text: var(--color-text);
+    --muted: var(--color-muted);
+    --card: var(--color-surface);
+    --shadow: var(--shadow-float);
+}
+
+/* Global foundation only. Component styles live beside their components. */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background: var(--color-page);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.app {
+    min-height: 100vh;
+    overflow: hidden;
+    padding-top: var(--header-height);
+    background: var(--color-page);
+}
+
+.page-shell {
+    width: min(1320px, calc(100% - 48px));
+    margin: 0 auto;
+}

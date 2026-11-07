@@ -1,0 +1,28 @@
+.content-section {
+    margin-top: 44px;
+}
+.section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 19px;
+}
+.section-header h2 {
+    margin: 0;
+    color: var(--text);
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    line-height: 1.2;
+}
+.section-header p {
+    color: var(--muted);
+    margin: 5px 0 0;
+    font-size: var(--font-size-sm);
+}
+.text-button {
+    border: 0;
+    background: transparent;
+    color: #2466d9;
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+}

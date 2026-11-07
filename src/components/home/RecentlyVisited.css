@@ -1,0 +1,40 @@
+.recent-section {
+    border-top: 1px solid #d4e1ef;
+    padding-top: 37px;
+}
+.recent-list {
+    display: flex;
+    gap: 15px;
+}
+.recent-list article {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #d3e1ee;
+    border-radius: 10px;
+}
+.recent-list article > svg {
+    color: #7894b6;
+    width: 16px;
+}
+.recent-list .country-flag {
+    font-size: var(--font-size-xl);
+}
+.recent-list strong {
+    display: block;
+    font-size: var(--font-size-sm);
+}
+.recent-list small {
+    color: var(--muted);
+    font-size: var(--font-size-xs);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-top: 3px;
+}
+.recent-list small svg {
+    width: 11px;
+}

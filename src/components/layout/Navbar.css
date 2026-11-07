@@ -1,0 +1,80 @@
+.site-header {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--header-height);
+    background: var(--navy);
+    color: #fff;
+    box-shadow: 0 3px 14px rgba(20, 47, 101, 0.17);
+}
+.nav-shell {
+    width: min(1320px, calc(100% - 48px));
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+.brand {
+    border: 0;
+    padding: 0 30px 0 0;
+    color: #fff;
+    border-right: 1px solid rgba(255, 255, 255, 0.42);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    text-decoration: none;
+}
+.brand svg {
+    color: #57dbef;
+    width: 31px;
+    height: 31px;
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex: 1;
+}
+.nav-link,
+.settings-button {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    border: 0;
+    border-radius: 22px;
+    padding: 8px 12px;
+    color: #fff;
+    background: transparent;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-decoration: none;
+}
+.nav-link svg,
+.settings-button svg {
+    width: 16px;
+    height: 16px;
+}
+.nav-link:hover,
+.nav-link.active {
+    background: #2e70e9;
+}
+.nav-settings {
+    border-left: 1px solid rgba(255, 255, 255, 0.42);
+    padding-left: 24px;
+}
+.settings-button {
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    padding: 7px 13px;
+}
+.page-shell {
+    width: min(1320px, calc(100% - 48px));
+    margin: 0 auto;
+}

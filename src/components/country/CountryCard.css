@@ -1,0 +1,291 @@
+.country-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+}
+.country-card {
+    position: relative;
+    width: 100%;
+    height: 426px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 5px 12px rgba(38, 65, 101, 0.12);
+}
+.country-card-header {
+    position: relative;
+    z-index: 1;
+    height: 140px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+                145deg,
+                transparent 0 49%,
+                rgba(109, 223, 232, 0.12) 49% 69%,
+                transparent 69%
+            )
+            15px -8px / 96px 102px,
+        linear-gradient(
+                35deg,
+                transparent 0 37%,
+                rgba(0, 70, 148, 0.1) 37% 59%,
+                transparent 59%
+            )
+            0 0 / 82px 78px,
+        linear-gradient(135deg, #0878b6 0%, #078fbc 53%, #0aa7c7 100%);
+}
+.country-card-header::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    opacity: 0.18;
+    background:
+        linear-gradient(133deg, transparent 0 55%, #6bd1df 55% 74%, transparent 74%)
+            27px 5px / 113px 94px,
+        linear-gradient(48deg, transparent 0 52%, #006aab 52% 72%, transparent 72%)
+            72px -4px / 126px 92px,
+        linear-gradient(142deg, transparent 0 54%, #b5edf1 54% 72%, transparent 72%)
+            174px 7px / 116px 86px;
+}
+.country-card-flag.country-flag-image {
+    position: absolute;
+    z-index: 3;
+    top: 21px;
+    left: 26px;
+    width: 110px;
+    height: 76px;
+    border: 4px solid #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 9px rgba(0, 47, 89, 0.22);
+}
+.country-card-flag.country-flag {
+    position: absolute;
+    z-index: 3;
+    top: 21px;
+    left: 26px;
+    display: grid;
+    place-items: center;
+    width: 110px;
+    height: 76px;
+    overflow: hidden;
+    border: 4px solid #fff;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 9px rgba(0, 47, 89, 0.22);
+    font-size: 56px;
+}
+.country-card-identity {
+    position: absolute;
+    z-index: 3;
+    top: 20px;
+    left: 157px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 132px;
+    min-height: 83px;
+    padding-left: 13px;
+    border-left: 1px solid rgba(255, 255, 255, 0.56);
+    color: #fff;
+    font-family: var(--font-ui);
+    text-align: center;
+}
+.country-card-identity strong {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    line-height: 1;
+}
+.country-card-identity small {
+    margin-top: 3px;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    line-height: 1;
+}
+.country-card-identity span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 9px;
+    color: #fff;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+}
+.country-card-identity span svg {
+    width: 13px;
+    height: 13px;
+    stroke-width: 2.3;
+}
+.country-card-wave {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 66px;
+}
+.country-card-content {
+    position: absolute;
+    z-index: 4;
+    top: 116px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 19px 16px;
+}
+.country-card-content h3 {
+    margin: 0 0 7px;
+    color: #11243f;
+    font-family: var(--font-ui);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    line-height: 1.15;
+}
+.country-card-subline {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 44px;
+}
+.country-card-region {
+    display: inline-flex;
+    align-items: center;
+    align-self: center;
+    gap: 8px;
+    max-width: calc(100% - 54px);
+    overflow: hidden;
+    padding: 0 12px;
+    color: #245783;
+    border-radius: 999px;
+    background: #dfeff9;
+    font-family: var(--font-ui);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    line-height: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.country-card-region svg {
+    flex: 0 0 auto;
+    width: 15px;
+    height: 15px;
+    color: #2874d7;
+    stroke-width: 2.2;
+}
+.country-card-favorite {
+    display: grid;
+    flex: 0 0 44px;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid #d3e0eb;
+    border-radius: 13px;
+    color: #1a4d83;
+    background: #fff;
+    box-shadow: 0 3px 7px rgba(35, 65, 102, 0.1);
+}
+.country-card-favorite svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.9;
+}
+.country-card-favorite.is-favorite {
+    color: #fff;
+    border-color: #2461ae;
+    background: #2461ae;
+}
+.country-card-favorite.is-favorite svg {
+    fill: currentColor;
+}
+.country-card-facts {
+    display: grid;
+    gap: 6px;
+    margin: 8px 0 9px;
+}
+.country-card-fact {
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr);
+    align-items: center;
+    min-height: 45px;
+    border-radius: 12px;
+}
+.country-card-fact.capital {
+    background: #edf3f8;
+}
+.country-card-fact.population {
+    background: #eaf3f1;
+}
+.country-card-fact.area {
+    background: #ecf3f7;
+}
+.country-card-fact-icon {
+    display: grid;
+    place-items: center;
+    align-self: stretch;
+    margin: 7px 0;
+    border-right: 2px solid #bdd8ef;
+    color: #2877e5;
+}
+.country-card-fact-icon svg {
+    width: 21px;
+    height: 21px;
+    stroke-width: 2.2;
+}
+.country-card-fact.population .country-card-fact-icon {
+    border-color: #b9dece;
+    color: #04a56b;
+}
+.country-card-fact.area .country-card-fact-icon {
+    border-color: #b8dfe7;
+    color: #069dc0;
+}
+.country-card-fact > div {
+    min-width: 0;
+    padding-left: 11px;
+}
+.country-card-fact dt {
+    color: #637992;
+    font-family: var(--font-ui);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    line-height: 1.1;
+}
+.country-card-fact dd {
+    overflow: hidden;
+    margin: 2px 0 0;
+    color: #11243f;
+    font-family: var(--font-ui);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    line-height: 1.1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.country-card-explore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 44px;
+    margin-top: auto;
+    border: 0;
+    border-radius: 12px;
+    color: #fff;
+    background: linear-gradient(90deg, #0960bd, #0b6dcc);
+    font-family: var(--font-ui);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+.country-card-explore svg {
+    width: 17px;
+    height: 17px;
+    stroke-width: 2.2;
+}
