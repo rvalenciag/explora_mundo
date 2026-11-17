@@ -1,7 +1,12 @@
 import { CountryCard } from "../country/CountryCard";
 import { SectionHeader } from "../common/SectionHeader";
 
-export function FeaturedCountries({ countries, onExploreCountry }) {
+export function FeaturedCountries({
+    countries,
+    favoriteCodes,
+    onExploreCountry,
+    onToggleFavorite,
+}) {
     return (
         <section className="content-section">
             <SectionHeader
@@ -18,7 +23,9 @@ export function FeaturedCountries({ countries, onExploreCountry }) {
                     <CountryCard
                         key={country.cca3}
                         country={country}
+                        favorite={favoriteCodes.has(country.cca3)}
                         onExplore={onExploreCountry}
+                        onToggleFavorite={onToggleFavorite}
                     />
                 ))}
             </div>

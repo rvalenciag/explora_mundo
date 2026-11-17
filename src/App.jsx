@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import { Navbar } from "./components/layout/Navbar";
 import { useCountries } from "./hooks/useCountries";
+import { useFavorites } from "./hooks/useFavorites";
 import { ExplorePage } from "./pages/ExplorePage";
 import { HomePage } from "./pages/HomePage";
 import "./App.css";
@@ -8,6 +9,7 @@ import "./styles/responsive.css";
 
 function App() {
     const { countries, loading, error } = useCountries();
+    const { favoriteCodes, toggleFavorite } = useFavorites();
 
     return (
         <div className="app">
@@ -20,6 +22,8 @@ function App() {
                             countries={countries}
                             loading={loading}
                             error={error}
+                            favoriteCodes={favoriteCodes}
+                            onToggleFavorite={toggleFavorite}
                         />
                     }
                 />
@@ -30,6 +34,8 @@ function App() {
                             countries={countries}
                             loading={loading}
                             error={error}
+                            favoriteCodes={favoriteCodes}
+                            onToggleFavorite={toggleFavorite}
                         />
                     }
                 />
@@ -40,6 +46,8 @@ function App() {
                             countries={countries}
                             loading={loading}
                             error={error}
+                            favoriteCodes={favoriteCodes}
+                            onToggleFavorite={toggleFavorite}
                         />
                     }
                 />
@@ -49,7 +57,7 @@ function App() {
     );
 }
 
-function HomeRoute({ countries, loading, error }) {
+function HomeRoute({ countries, loading, error, favoriteCodes, onToggleFavorite }) {
     const navigate = useNavigate();
 
     function openExplore({ country = null, region = "" } = {}) {
@@ -67,6 +75,8 @@ function HomeRoute({ countries, loading, error }) {
             countries={countries}
             loading={loading}
             error={error}
+            favoriteCodes={favoriteCodes}
+            onToggleFavorite={onToggleFavorite}
             onExplore={openExplore}
             onExploreCountry={(country) => openExplore({ country })}
             onExploreRegion={(region) => openExplore({ region })}

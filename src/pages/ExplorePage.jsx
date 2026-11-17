@@ -14,7 +14,13 @@ const initialFilters = {
     subregion: "",
     order: "name-asc",
 };
-export function ExplorePage({ countries, loading, error }) {
+export function ExplorePage({
+    countries,
+    loading,
+    error,
+    favoriteCodes,
+    onToggleFavorite,
+}) {
     const navigate = useNavigate();
     const location = useLocation();
     const { countryCode } = useParams();
@@ -36,7 +42,6 @@ export function ExplorePage({ countries, loading, error }) {
     const [view, setView] = useState("grid");
     const [page, setPage] = useState(1);
     const [pageSize, setPageSize] = useState(12);
-    const [favoriteCodes, setFavoriteCodes] = useState(() => new Set());
 
     const selectedCountry = countryCode
         ? countries.find(
@@ -133,18 +138,6 @@ export function ExplorePage({ countries, loading, error }) {
         setPage(1);
     }
 
-    function toggleFavorite(code) {
-        setFavoriteCodes((current) => {
-            const next = new Set(current);
-            if (next.has(code)) {
-                next.delete(code);
-            } else {
-                next.add(code);
-            }
-            return next;
-        });
-    }
-
     function openCountry(country) {
         navigate({
             pathname: `/explorar/${country.cca3.toLocaleLowerCase("es")}`,
@@ -195,7 +188,7 @@ export function ExplorePage({ countries, loading, error }) {
                 countries={visibleCountries}
                 favoriteCodes={favoriteCodes}
                 onExplore={openCountry}
-                onToggleFavorite={toggleFavorite}
+                onToggleFavorite={onToggleFavorite}
                 view={view}
             />
             <div className="catalog-footer">
@@ -215,7 +208,7 @@ export function ExplorePage({ countries, loading, error }) {
                     country={selectedCountry}
                     favorite={favoriteCodes.has(selectedCountry.cca3)}
                     onClose={closeCountry}
-                    onToggleFavorite={toggleFavorite}
+                    onToggleFavorite={onToggleFavorite}
                 />
             )}
         </main>

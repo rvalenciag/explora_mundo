@@ -11,6 +11,8 @@ export function HomePage({
     countries,
     loading,
     error,
+    favoriteCodes,
+    onToggleFavorite,
     onExplore,
     onExploreCountry,
     onExploreRegion,
@@ -86,7 +88,9 @@ export function HomePage({
                         </section>
                         <FeaturedCountries
                             countries={displayFeatured}
+                            favoriteCodes={favoriteCodes}
                             onExploreCountry={onExploreCountry}
+                            onToggleFavorite={onToggleFavorite}
                         />
                         <RegionExplorer
                             countries={countries}
