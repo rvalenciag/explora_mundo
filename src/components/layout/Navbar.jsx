@@ -15,7 +15,7 @@ const items = [
     { id: "explore", label: "Explorar", icon: Search, to: "/explorar" },
     { id: "compare", label: "Comparar", icon: ArrowLeftRight },
     { id: "stats", label: "Estadísticas", icon: BarChart3 },
-    { id: "favorites", label: "Favoritos", icon: Heart },
+    { id: "favorites", label: "Favoritos", icon: Heart, to: "/favoritos" },
 ];
 
 export function Navbar() {
@@ -36,6 +36,7 @@ export function Navbar() {
                     {items.map(({ id, label, icon: Icon, to }) =>
                         to ? (
                             <NavLink
+                                aria-label={label}
                                 className={({ isActive }) =>
                                     isActive ? "nav-link active" : "nav-link"
                                 }

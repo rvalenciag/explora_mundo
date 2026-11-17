@@ -74,6 +74,16 @@
     border: 1px solid rgba(255, 255, 255, 0.75);
     padding: 7px 13px;
 }
+
+@media (max-width: 360px) {
+    .site-header .nav-shell {
+        gap: 6px;
+    }
+
+    .main-nav .nav-link {
+        padding-inline: 5px;
+    }
+}
 .page-shell {
     width: min(1320px, calc(100% - 48px));
     margin: 0 auto;

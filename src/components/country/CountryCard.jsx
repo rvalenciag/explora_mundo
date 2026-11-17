@@ -62,7 +62,11 @@ export function CountryCard({
                         }
                         type="button"
                         onClick={() => onToggleFavorite?.(country.cca3)}
-                        aria-label={`Añadir ${country.name} a favoritos`}
+                        aria-label={
+                            favorite
+                                ? `Quitar ${country.name} de favoritos`
+                                : `Añadir ${country.name} a favoritos`
+                        }
                     >
                         <Heart aria-hidden="true" />
                     </button>

@@ -44,5 +44,9 @@ export function useFavorites() {
         });
     }
 
-    return { favoriteCodes, toggleFavorite };
+    function clearFavorites() {
+        setFavoriteCodes(new Set());
+    }
+
+    return { favoriteCodes, toggleFavorite, clearFavorites };
 }

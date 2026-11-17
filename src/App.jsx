@@ -3,13 +3,14 @@ import { Navbar } from "./components/layout/Navbar";
 import { useCountries } from "./hooks/useCountries";
 import { useFavorites } from "./hooks/useFavorites";
 import { ExplorePage } from "./pages/ExplorePage";
+import { FavoritesPage } from "./pages/FavoritesPage";
 import { HomePage } from "./pages/HomePage";
 import "./App.css";
 import "./styles/responsive.css";
 
 function App() {
     const { countries, loading, error } = useCountries();
-    const { favoriteCodes, toggleFavorite } = useFavorites();
+    const { favoriteCodes, toggleFavorite, clearFavorites } = useFavorites();
 
     return (
         <div className="app">
@@ -48,6 +49,19 @@ function App() {
                             error={error}
                             favoriteCodes={favoriteCodes}
                             onToggleFavorite={toggleFavorite}
+                        />
+                    }
+                />
+                <Route
+                    path="/favoritos"
+                    element={
+                        <FavoritesPage
+                            countries={countries}
+                            loading={loading}
+                            error={error}
+                            favoriteCodes={favoriteCodes}
+                            onToggleFavorite={toggleFavorite}
+                            onClearFavorites={clearFavorites}
                         />
                     }
                 />
