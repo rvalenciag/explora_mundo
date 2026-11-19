@@ -14,6 +14,7 @@ export function CountryProfilePage({
     error,
     favoriteCodes,
     onToggleFavorite,
+    onAddToComparison,
 }) {
     const { countryCode } = useParams();
     const navigate = useNavigate();
@@ -53,6 +54,12 @@ export function CountryProfilePage({
         setActiveSectionCountry(countryCode);
     }
 
+    function compareCountry() {
+        onAddToComparison(country.cca3);
+        navigate("/comparar");
+        window.scrollTo(0, 0);
+    }
+
     if (loading) {
         return (
             <main className="page-shell country-profile-page country-profile-state">
@@ -82,6 +89,7 @@ export function CountryProfilePage({
                 favorite={favoriteCodes.has(country.cca3)}
                 onToggleFavorite={onToggleFavorite}
                 onBack={returnToExplore}
+                onCompare={compareCountry}
             />
             <CountryProfileTabs
                 activeSection={visibleSection}

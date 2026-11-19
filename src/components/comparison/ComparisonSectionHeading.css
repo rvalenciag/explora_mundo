@@ -1,0 +1,43 @@
+.comparison-section-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.comparison-section-icon {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    color: #286ee0;
+    background: #e2eeff;
+}
+
+.comparison-section-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.comparison-section-heading h2,
+.comparison-section-heading p {
+    margin: 0;
+}
+
+.comparison-section-heading h2 {
+    color: #173d6d;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    line-height: 1.1;
+}
+
+.comparison-section-heading p {
+    margin-top: 4px;
+    color: #6983a1;
+    font-size: var(--font-size-xs);
+}
+
+.comparison-section-actions {
+    margin-left: auto;
+}

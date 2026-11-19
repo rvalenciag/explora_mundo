@@ -28,6 +28,7 @@ export function CountryDetailDrawer({
     onClose,
     onToggleFavorite,
     onOpenFullProfile,
+    onCompare,
 }) {
     const [activeTab, setActiveTab] = useState("General");
 
@@ -126,7 +127,11 @@ export function CountryDetailDrawer({
                 </div>
 
                 <footer className="country-detail-footer">
-                    <button className="detail-compare" type="button">
+                    <button
+                        className="detail-compare"
+                        type="button"
+                        onClick={() => onCompare?.(country)}
+                    >
                         Comparar
                     </button>
                     <button

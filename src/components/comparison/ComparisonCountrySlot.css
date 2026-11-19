@@ -1,0 +1,145 @@
+.comparison-country-slot {
+    position: relative;
+    min-height: 161px;
+    overflow: hidden;
+    padding: 27px 16px 22px;
+    border: 1px solid #bfd7f2;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(34, 70, 110, 0.07);
+}
+
+.comparison-country-slot::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 5px;
+    border-radius: 13px 0 0 13px;
+    content: "";
+    background: #286be4;
+}
+
+.comparison-country-slot.cyan::before {
+    background: #06a3c3;
+}
+
+.comparison-country-slot.green::before {
+    background: #10aa79;
+}
+
+.comparison-country-main {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 65px minmax(0, 1fr) 28px;
+    gap: 14px;
+    align-items: center;
+}
+
+.comparison-country-main .country-flag-image,
+.comparison-country-main .country-flag {
+    display: grid;
+    place-items: center;
+    width: 65px;
+    height: 46px;
+    overflow: hidden;
+    border: 1px solid #d4e4f4;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 35px;
+}
+
+.comparison-country-main strong,
+.comparison-country-main span {
+    display: block;
+}
+
+.comparison-country-main strong {
+    overflow: hidden;
+    color: #183a66;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    line-height: 1.1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.comparison-country-main span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 6px;
+    overflow: hidden;
+    color: #63809f;
+    font-size: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.comparison-country-main span svg {
+    flex: 0 0 auto;
+    width: 12px;
+    height: 12px;
+}
+
+.comparison-country-main button {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    color: #497098;
+    background: #edf4fc;
+}
+
+.comparison-country-main button svg {
+    width: 16px;
+    height: 16px;
+}
+
+.comparison-country-slot footer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.comparison-country-slot footer > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #1b4779;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+}
+
+.comparison-country-slot footer > span svg {
+    width: 17px;
+    height: 17px;
+    color: #2873db;
+}
+
+.comparison-country-slot.is-empty {
+    display: grid;
+    align-content: center;
+    gap: 9px;
+    border-style: dashed;
+    color: #5d7998;
+    background: #f9fcff;
+}
+
+.comparison-country-slot.is-empty::before {
+    display: none;
+}
+
+.comparison-country-slot.is-empty strong {
+    color: #244b77;
+    font-family: var(--font-heading);
+}

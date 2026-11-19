@@ -13,7 +13,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 const items = [
     { id: "home", label: "Inicio", icon: House, to: "/" },
     { id: "explore", label: "Explorar", icon: Search, to: "/explorar" },
-    { id: "compare", label: "Comparar", icon: ArrowLeftRight },
+    { id: "compare", label: "Comparar", icon: ArrowLeftRight, to: "/comparar" },
     { id: "stats", label: "Estadísticas", icon: BarChart3 },
     { id: "favorites", label: "Favoritos", icon: Heart, to: "/favoritos" },
 ];

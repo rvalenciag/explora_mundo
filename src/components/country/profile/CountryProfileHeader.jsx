@@ -1,8 +1,14 @@
-import { Heart } from "lucide-react";
+import { ArrowLeftRight, Heart } from "lucide-react";
 import { CountryFlag } from "../CountryFlag";
 import { countryValue } from "./profileFormatters";
 
-export function CountryProfileHeader({ country, favorite, onToggleFavorite, onBack }) {
+export function CountryProfileHeader({
+    country,
+    favorite,
+    onToggleFavorite,
+    onBack,
+    onCompare,
+}) {
     return (
         <header className="profile-header">
             <nav className="profile-breadcrumb" aria-label="Ruta de navegación">
@@ -40,6 +46,14 @@ export function CountryProfileHeader({ country, favorite, onToggleFavorite, onBa
                     >
                         <Heart aria-hidden="true" />
                         <span>{favorite ? "En favoritos" : "Favoritos"}</span>
+                    </button>
+                    <button
+                        className="profile-compare"
+                        type="button"
+                        onClick={onCompare}
+                    >
+                        <ArrowLeftRight aria-hidden="true" />
+                        Agregar a comparar
                     </button>
                 </div>
             </div>

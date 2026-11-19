@@ -20,6 +20,7 @@ export function ExplorePage({
     error,
     favoriteCodes,
     onToggleFavorite,
+    onAddToComparison,
 }) {
     const navigate = useNavigate();
     const location = useLocation();
@@ -154,6 +155,12 @@ export function ExplorePage({
         window.scrollTo(0, 0);
     }
 
+    function compareCountry(country) {
+        onAddToComparison(country.cca3);
+        navigate("/comparar");
+        window.scrollTo(0, 0);
+    }
+
     return (
         <main className="page-shell explore-page">
             <div className="page-intro">
@@ -215,6 +222,7 @@ export function ExplorePage({
                     onClose={closeCountry}
                     onToggleFavorite={onToggleFavorite}
                     onOpenFullProfile={openFullProfile}
+                    onCompare={compareCountry}
                 />
             )}
         </main>

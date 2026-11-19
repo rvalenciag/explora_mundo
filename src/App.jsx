@@ -1,10 +1,12 @@
 import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import { Navbar } from "./components/layout/Navbar";
 import { useCountries } from "./hooks/useCountries";
+import { useComparison } from "./hooks/useComparison";
 import { useFavorites } from "./hooks/useFavorites";
 import { ExplorePage } from "./pages/ExplorePage";
 import { FavoritesPage } from "./pages/FavoritesPage";
 import { CountryProfilePage } from "./pages/CountryProfilePage";
+import { ComparePage } from "./pages/ComparePage";
 import { HomePage } from "./pages/HomePage";
 import "./App.css";
 import "./styles/responsive.css";
@@ -12,6 +14,13 @@ import "./styles/responsive.css";
 function App() {
     const { countries, loading, error } = useCountries();
     const { favoriteCodes, toggleFavorite, clearFavorites } = useFavorites();
+    const {
+        comparisonCodes,
+        addCountry,
+        replaceCountry,
+        removeCountry,
+        maximumCountries,
+    } = useComparison();
 
     return (
         <div className="app">
@@ -38,6 +47,7 @@ function App() {
                             error={error}
                             favoriteCodes={favoriteCodes}
                             onToggleFavorite={toggleFavorite}
+                            onAddToComparison={addCountry}
                         />
                     }
                 />
@@ -50,6 +60,22 @@ function App() {
                             error={error}
                             favoriteCodes={favoriteCodes}
                             onToggleFavorite={toggleFavorite}
+                            onAddToComparison={addCountry}
+                        />
+                    }
+                />
+                <Route
+                    path="/comparar"
+                    element={
+                        <ComparePage
+                            countries={countries}
+                            loading={loading}
+                            error={error}
+                            comparisonCodes={comparisonCodes}
+                            onAddCountry={addCountry}
+                            onReplaceCountry={replaceCountry}
+                            onRemoveCountry={removeCountry}
+                            maximumCountries={maximumCountries}
                         />
                     }
                 />
@@ -62,6 +88,7 @@ function App() {
                             error={error}
                             favoriteCodes={favoriteCodes}
                             onToggleFavorite={toggleFavorite}
+                            onAddToComparison={addCountry}
                         />
                     }
                 />
