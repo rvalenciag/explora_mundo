@@ -168,12 +168,6 @@
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 285px), 1fr));
 }
 
-.favorites-page .country-card-favorite.is-favorite {
-    border-color: #d3e0eb;
-    color: var(--color-primary);
-    background: var(--color-surface);
-}
-
 .favorites-state {
     padding: 24px;
     color: #486587;

@@ -125,9 +125,9 @@
     stroke-width: 1.9;
 }
 .list-favorite.is-favorite {
-    color: #fff;
-    border-color: #2461ae;
-    background: #2461ae;
+    border-color: #cddcec;
+    color: var(--color-primary);
+    background: var(--color-surface);
 }
 .list-favorite.is-favorite svg {
     fill: currentColor;

@@ -175,8 +175,8 @@
     width: 22px;
 }
 .detail-favorite.is-favorite {
-    color: #fff;
-    background: #2461ae;
+    color: var(--color-primary);
+    background: var(--color-surface);
 }
 .detail-favorite.is-favorite svg {
     fill: currentColor;

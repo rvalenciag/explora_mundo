@@ -197,9 +197,9 @@
     stroke-width: 1.9;
 }
 .country-card-favorite.is-favorite {
-    color: #fff;
-    border-color: #2461ae;
-    background: #2461ae;
+    border-color: #d3e0eb;
+    color: var(--color-primary);
+    background: var(--color-surface);
 }
 .country-card-favorite.is-favorite svg {
     fill: currentColor;
