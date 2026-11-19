@@ -14,7 +14,7 @@ const items = [
     { id: "home", label: "Inicio", icon: House, to: "/" },
     { id: "explore", label: "Explorar", icon: Search, to: "/explorar" },
     { id: "compare", label: "Comparar", icon: ArrowLeftRight, to: "/comparar" },
-    { id: "stats", label: "Estadísticas", icon: BarChart3 },
+    { id: "stats", label: "Estadísticas", icon: BarChart3, to: "/estadisticas" },
     { id: "favorites", label: "Favoritos", icon: Heart, to: "/favoritos" },
 ];
 

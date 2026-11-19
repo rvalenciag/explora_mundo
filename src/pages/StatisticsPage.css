@@ -1,0 +1,100 @@
+.statistics-page {
+    display: grid;
+    gap: 16px;
+    padding: 24px 0 68px;
+    font-family: var(--font-ui);
+}
+
+.statistics-page-heading h1,
+.statistics-page-heading p {
+    margin: 0;
+}
+
+.statistics-page-heading h1 {
+    padding-left: 13px;
+    border-left: 5px solid var(--color-primary);
+    color: #183d6d;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-page);
+    line-height: 1.2;
+}
+
+.statistics-page-heading p {
+    margin-top: 6px;
+    color: #6782a0;
+    font-size: var(--font-size-xs);
+}
+
+.statistics-notice {
+    margin: 0;
+    padding: 12px 15px;
+    border: 1px solid #bfd9f3;
+    border-radius: 9px;
+    color: #527292;
+    background: #f6faff;
+    font-size: var(--font-size-sm);
+}
+
+.statistics-analysis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+@media (max-width: 900px) {
+    .statistics-summary-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .statistics-analysis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .statistics-classifications > div {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .statistics-filters {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .statistics-page {
+        padding-top: 20px;
+    }
+
+    .statistics-page-heading h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    .statistics-summary-metrics,
+    .statistics-filters,
+    .statistics-classifications > div {
+        grid-template-columns: 1fr;
+    }
+
+    .statistics-table-heading {
+        grid-template-columns: 38px minmax(0, 1fr);
+    }
+
+    .statistics-table-search,
+    .statistics-table-heading select {
+        grid-column: span 2;
+    }
+
+    .statistics-data-table > footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .statistics-regional-comparison .statistics-card-heading {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .statistics-regional-comparison .statistics-card-heading > nav {
+        width: 100%;
+        margin: 8px 0 0;
+    }
+}

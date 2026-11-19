@@ -1,0 +1,69 @@
+.statistics-regional-comparison .statistics-card-heading > nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+    width: 215px;
+    margin: 0 0 0 auto;
+    padding: 3px;
+    border-radius: 8px;
+    background: #e4eefb;
+}
+
+.statistics-regional-comparison .statistics-card-heading > nav button {
+    min-height: 28px;
+    border: 0;
+    border-radius: 6px;
+    color: #486c94;
+    background: transparent;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.statistics-regional-comparison .statistics-card-heading > nav button.active {
+    color: #fff;
+    background: #2869e6;
+}
+
+.statistics-regional-bars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+    gap: 18px;
+    align-items: end;
+    height: 143px;
+    margin-top: 18px;
+    padding: 0 15px;
+    border-bottom: 1px solid #d9e5f2;
+}
+
+.statistics-regional-bars > div {
+    display: grid;
+    grid-template-rows: 18px 1fr 24px;
+    gap: 5px;
+    height: 100%;
+    text-align: center;
+}
+
+.statistics-regional-bars span {
+    align-self: end;
+    overflow: hidden;
+    color: #244b79;
+    font-size: 10px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.statistics-regional-bars i {
+    align-self: end;
+    min-height: 4px;
+    border-radius: 4px 4px 0 0;
+}
+
+.statistics-regional-bars strong {
+    align-self: center;
+    overflow: hidden;
+    color: #365c86;
+    font-size: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

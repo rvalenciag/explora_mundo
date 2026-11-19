@@ -1,0 +1,99 @@
+.statistics-region-distribution > nav,
+.statistics-regional-comparison > nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    margin-top: 13px;
+    padding: 3px;
+    border-radius: 8px;
+    background: #e4eefb;
+}
+
+.statistics-region-distribution > nav button,
+.statistics-regional-comparison > nav button {
+    min-height: 28px;
+    border: 0;
+    border-radius: 6px;
+    color: #486c94;
+    background: transparent;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.statistics-region-distribution > nav button.active,
+.statistics-regional-comparison > nav button.active {
+    color: #fff;
+    background: #2869e6;
+}
+
+.statistics-distribution-content {
+    display: grid;
+    grid-template-columns: 145px minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.statistics-donut {
+    display: grid;
+    place-items: center;
+    width: 142px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.statistics-donut > div {
+    display: grid;
+    place-content: center;
+    width: 82px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+}
+
+.statistics-donut strong {
+    color: #224874;
+    font-size: var(--font-size-lg);
+}
+
+.statistics-donut span {
+    margin-top: 3px;
+    color: #6e86a1;
+    font-size: 9px;
+}
+
+.statistics-distribution-content ul {
+    display: grid;
+    gap: 9px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.statistics-distribution-content li {
+    display: grid;
+    grid-template-columns: 10px minmax(0, 1fr) auto;
+    gap: 7px;
+    align-items: center;
+    color: #315981;
+    font-size: 10px;
+}
+
+.statistics-distribution-content li > span {
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+}
+
+.statistics-distribution-content li strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.statistics-distribution-content li small {
+    color: #69829d;
+    font-size: 9px;
+    white-space: nowrap;
+}

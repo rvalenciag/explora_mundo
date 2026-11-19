@@ -1,0 +1,94 @@
+.statistics-filters {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) auto auto;
+    gap: 13px;
+    align-items: end;
+    padding: 13px;
+    border: 1px solid #c6dcef;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(36, 72, 111, 0.06);
+}
+
+.statistics-filters label:not(.statistics-dependent-toggle) {
+    display: grid;
+    gap: 5px;
+}
+
+.statistics-filters label > span:first-child {
+    color: #547396;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.statistics-filters select {
+    width: 100%;
+    min-height: 34px;
+    padding: 0 10px;
+    border: 1px solid #bfd9f5;
+    border-radius: 7px;
+    color: #315c8d;
+    background: #f6faff;
+    font-size: 11px;
+}
+
+.statistics-dependent-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 34px;
+    color: #527293;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.statistics-dependent-toggle input {
+    position: absolute;
+    opacity: 0;
+}
+
+.statistics-dependent-toggle > span {
+    position: relative;
+    width: 31px;
+    height: 18px;
+    border-radius: 999px;
+    background: #c8d8eb;
+}
+
+.statistics-dependent-toggle > span::after {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    content: "";
+    background: #fff;
+    transition: transform 0.2s ease;
+}
+
+.statistics-dependent-toggle input:checked + span {
+    background: #2767e8;
+}
+
+.statistics-dependent-toggle input:checked + span::after {
+    transform: translateX(13px);
+}
+
+.statistics-filters > button {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    color: #2b69cf;
+    background: #e5efff;
+}
+
+.statistics-filters > button svg {
+    width: 16px;
+    height: 16px;
+}

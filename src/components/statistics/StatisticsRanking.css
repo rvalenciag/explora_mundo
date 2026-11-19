@@ -1,0 +1,143 @@
+.statistics-ranking,
+.statistics-region-distribution,
+.statistics-regional-comparison,
+.statistics-classifications,
+.statistics-data-table {
+    padding: 20px;
+    border: 1px solid #bfd9f2;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(34, 70, 110, 0.06);
+}
+
+.statistics-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.statistics-card-heading > span {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    color: #2769d9;
+    background: #e3eeff;
+}
+
+.statistics-card-heading svg {
+    width: 20px;
+    height: 20px;
+}
+
+.statistics-card-heading h2,
+.statistics-card-heading p {
+    margin: 0;
+}
+
+.statistics-card-heading h2 {
+    color: #1b416f;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+}
+
+.statistics-card-heading p {
+    margin-top: 3px;
+    color: #7189a4;
+    font-size: 10px;
+}
+
+.statistics-ranking > nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    margin-top: 13px;
+    padding: 3px;
+    border-radius: 8px;
+    background: #e4eefb;
+}
+
+.statistics-ranking > nav button {
+    min-height: 28px;
+    border: 0;
+    border-radius: 6px;
+    color: #486c94;
+    background: transparent;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.statistics-ranking > nav button.active {
+    color: #fff;
+    background: #2869e6;
+}
+
+.statistics-ranking-list {
+    display: grid;
+    gap: 11px;
+    margin: 17px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.statistics-ranking-list li {
+    display: grid;
+    grid-template-columns: 17px 23px minmax(0, 1fr);
+    gap: 8px;
+    align-items: center;
+}
+
+.statistics-rank-position {
+    color: #41668f;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.statistics-ranking-list .country-flag-image,
+.statistics-ranking-list .country-flag {
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 15px;
+    overflow: hidden;
+    border-radius: 2px;
+    font-size: 13px;
+}
+
+.statistics-ranking-list header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #214675;
+    font-size: 10px;
+}
+
+.statistics-ranking-list header strong,
+.statistics-ranking-list header span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.statistics-ranking-list header span {
+    font-weight: 700;
+}
+
+.statistics-ranking-track,
+.statistics-ranking-track > span {
+    display: block;
+    height: 8px;
+    border-radius: 999px;
+}
+
+.statistics-ranking-track {
+    margin-top: 5px;
+    overflow: hidden;
+    background: #e3edf8;
+}
+
+.statistics-ranking-track > span {
+    min-width: 5px;
+    background: #2869e6;
+}

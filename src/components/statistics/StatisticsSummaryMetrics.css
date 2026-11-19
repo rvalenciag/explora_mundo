@@ -1,0 +1,77 @@
+.statistics-summary-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.statistics-summary-metrics article {
+    position: relative;
+    min-height: 108px;
+    padding: 19px 21px;
+    overflow: hidden;
+    border: 1px solid;
+    border-radius: 11px;
+}
+
+.statistics-summary-metrics article::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    content: "";
+    opacity: 0.4;
+    background: linear-gradient(165deg, transparent 0 40%, currentColor 41% 100%);
+}
+
+.statistics-summary-metrics article > span,
+.statistics-summary-metrics article > strong,
+.statistics-summary-metrics article > svg {
+    position: relative;
+    z-index: 1;
+}
+
+.statistics-summary-metrics article > span {
+    display: block;
+    color: #557796;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+}
+
+.statistics-summary-metrics article > strong {
+    display: block;
+    margin-top: 8px;
+    font-size: var(--font-size-lg);
+}
+
+.statistics-summary-metrics article > svg {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 22px;
+    height: 22px;
+}
+
+.statistics-summary-metrics .blue {
+    border-color: #b9d4f4;
+    color: #2769d9;
+    background: #ddecff;
+}
+
+.statistics-summary-metrics .green {
+    border-color: #aee3d3;
+    color: #049675;
+    background: #ddf5ea;
+}
+
+.statistics-summary-metrics .orange {
+    border-color: #efd4a8;
+    color: #db7e13;
+    background: #fff0da;
+}
+
+.statistics-summary-metrics .purple {
+    border-color: #d1c0fa;
+    color: #7952c9;
+    background: #eee5ff;
+}

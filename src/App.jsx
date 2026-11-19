@@ -7,6 +7,7 @@ import { ExplorePage } from "./pages/ExplorePage";
 import { FavoritesPage } from "./pages/FavoritesPage";
 import { CountryProfilePage } from "./pages/CountryProfilePage";
 import { ComparePage } from "./pages/ComparePage";
+import { StatisticsPage } from "./pages/StatisticsPage";
 import { HomePage } from "./pages/HomePage";
 import "./App.css";
 import "./styles/responsive.css";
@@ -76,6 +77,16 @@ function App() {
                             onReplaceCountry={replaceCountry}
                             onRemoveCountry={removeCountry}
                             maximumCountries={maximumCountries}
+                        />
+                    }
+                />
+                <Route
+                    path="/estadisticas"
+                    element={
+                        <StatisticsPage
+                            countries={countries}
+                            loading={loading}
+                            error={error}
                         />
                     }
                 />
