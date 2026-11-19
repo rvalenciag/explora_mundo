@@ -149,6 +149,11 @@ export function ExplorePage({
         navigate({ pathname: "/explorar", search: location.search });
     }
 
+    function openFullProfile(country) {
+        navigate(`/pais/${country.cca3.toLocaleLowerCase("es")}`);
+        window.scrollTo(0, 0);
+    }
+
     return (
         <main className="page-shell explore-page">
             <div className="page-intro">
@@ -209,6 +214,7 @@ export function ExplorePage({
                     favorite={favoriteCodes.has(selectedCountry.cca3)}
                     onClose={closeCountry}
                     onToggleFavorite={onToggleFavorite}
+                    onOpenFullProfile={openFullProfile}
                 />
             )}
         </main>

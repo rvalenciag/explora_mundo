@@ -4,6 +4,7 @@ import { useCountries } from "./hooks/useCountries";
 import { useFavorites } from "./hooks/useFavorites";
 import { ExplorePage } from "./pages/ExplorePage";
 import { FavoritesPage } from "./pages/FavoritesPage";
+import { CountryProfilePage } from "./pages/CountryProfilePage";
 import { HomePage } from "./pages/HomePage";
 import "./App.css";
 import "./styles/responsive.css";
@@ -44,6 +45,18 @@ function App() {
                     path="/explorar/:countryCode"
                     element={
                         <ExplorePage
+                            countries={countries}
+                            loading={loading}
+                            error={error}
+                            favoriteCodes={favoriteCodes}
+                            onToggleFavorite={toggleFavorite}
+                        />
+                    }
+                />
+                <Route
+                    path="/pais/:countryCode"
+                    element={
+                        <CountryProfilePage
                             countries={countries}
                             loading={loading}
                             error={error}

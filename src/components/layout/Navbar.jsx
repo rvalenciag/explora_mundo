@@ -8,7 +8,7 @@ import {
     Settings2,
     ArrowLeftRight,
 } from "lucide-react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const items = [
     { id: "home", label: "Inicio", icon: House, to: "/" },
@@ -19,6 +19,8 @@ const items = [
 ];
 
 export function Navbar() {
+    const location = useLocation();
+
     return (
         <header className="site-header">
             <div className="nav-shell">
@@ -37,9 +39,14 @@ export function Navbar() {
                         to ? (
                             <NavLink
                                 aria-label={label}
-                                className={({ isActive }) =>
-                                    isActive ? "nav-link active" : "nav-link"
-                                }
+                                className={({ isActive }) => {
+                                    const profileIsOpen =
+                                        id === "explore" &&
+                                        location.pathname.startsWith("/pais/");
+                                    return isActive || profileIsOpen
+                                        ? "nav-link active"
+                                        : "nav-link";
+                                }}
                                 end={id === "home"}
                                 key={id}
                                 to={to}

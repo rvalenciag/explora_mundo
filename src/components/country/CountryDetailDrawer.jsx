@@ -27,6 +27,7 @@ export function CountryDetailDrawer({
     favorite = false,
     onClose,
     onToggleFavorite,
+    onOpenFullProfile,
 }) {
     const [activeTab, setActiveTab] = useState("General");
 
@@ -128,7 +129,11 @@ export function CountryDetailDrawer({
                     <button className="detail-compare" type="button">
                         Comparar
                     </button>
-                    <button className="detail-full" type="button" onClick={onClose}>
+                    <button
+                        className="detail-full"
+                        type="button"
+                        onClick={() => onOpenFullProfile?.(country)}
+                    >
                         Ver ficha completa <ArrowRight aria-hidden="true" />
                     </button>
                     <small>Puedes cerrar el panel en cualquier momento.</small>

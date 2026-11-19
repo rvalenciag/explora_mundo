@@ -63,6 +63,9 @@ const weekDayNames = {
 };
 
 function normalizeCountry(country) {
+    const googleMaps = country.links?.google_maps;
+    const openStreetMaps = country.links?.open_street_maps;
+
     return {
         name:
             country.names?.translations?.spa?.common ??
@@ -101,6 +104,8 @@ function normalizeCountry(country) {
         })),
         demonym:
             country.demonyms?.spa?.m ?? country.demonyms?.eng?.m ?? "No disponible",
+        demonymFemale:
+            country.demonyms?.spa?.f ?? country.demonyms?.eng?.f ?? "No disponible",
         tld: country.tlds?.[0] ?? "No disponible",
         callingCode: country.calling_codes?.[0]
             ? `+${country.calling_codes[0]}`
@@ -115,7 +120,59 @@ function normalizeCountry(country) {
         borders: country.borders ?? [],
         landlocked: country.landlocked,
         wikipedia: country.links?.wikipedia,
-        mapUrl: country.links?.google_maps ?? country.links?.open_street_maps,
+        googleMaps,
+        openStreetMaps,
+        officialWebsite:
+            country.links?.official_website ??
+            country.links?.official ??
+            country.links?.website,
+        mapUrl: googleMaps ?? openStreetMaps,
+        numericCode:
+            country.codes?.ccn3 ??
+            country.codes?.numeric ??
+            country.codes?.numeric_code ??
+            country.codes?.numericCode ??
+            "No disponible",
+        independent:
+            typeof country.classification?.sovereign === "boolean"
+                ? country.classification.sovereign
+                : typeof country.independent === "boolean"
+                  ? country.independent
+                  : typeof country.sovereign === "boolean"
+                    ? country.sovereign
+                    : null,
+        unMember:
+            typeof country.classification?.un_member === "boolean"
+                ? country.classification.un_member
+                : typeof country.memberships?.un === "boolean"
+                  ? country.memberships.un
+                  : typeof country.un_member === "boolean"
+                    ? country.un_member
+                    : typeof country.unMember === "boolean"
+                      ? country.unMember
+                      : null,
+        dependent:
+            typeof country.classification?.dependency === "boolean"
+                ? country.classification.dependency
+                : typeof country.dependent === "boolean"
+                  ? country.dependent
+                  : typeof country.dependency === "boolean"
+                    ? country.dependency
+                    : null,
+        disputed:
+            typeof country.classification?.disputed === "boolean"
+                ? country.classification.disputed
+                : typeof country.disputed === "boolean"
+                  ? country.disputed
+                  : typeof country.status?.disputed === "boolean"
+                    ? country.status.disputed
+                    : null,
+        isoStatus:
+            country.classification?.iso_status ??
+            country.status?.iso ??
+            country.status?.iso_status ??
+            country.codes?.status ??
+            (typeof country.status === "string" ? country.status : "No disponible"),
     };
 }
 
