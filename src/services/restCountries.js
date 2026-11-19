@@ -159,6 +159,10 @@ function normalizeCountry(country) {
                   : typeof country.dependency === "boolean"
                     ? country.dependency
                     : null,
+        dependencyType:
+            country.classification?.dependency_type ??
+            country.dependency_type ??
+            "No disponible",
         disputed:
             typeof country.classification?.disputed === "boolean"
                 ? country.classification.disputed
@@ -173,6 +177,11 @@ function normalizeCountry(country) {
             country.status?.iso_status ??
             country.codes?.status ??
             (typeof country.status === "string" ? country.status : "No disponible"),
+        parentCode:
+            country.parent?.alpha_3 ??
+            country.parent?.alpha_2 ??
+            country.parent_code ??
+            "",
     };
 }
 

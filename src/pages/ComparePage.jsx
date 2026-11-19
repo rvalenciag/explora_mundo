@@ -1,10 +1,15 @@
 import "./ComparePage.css";
 import { useMemo, useState } from "react";
-import { Maximize2, UsersRound } from "lucide-react";
+import { Gauge, Maximize2, UsersRound } from "lucide-react";
 import { ComparisonBarChart } from "../components/comparison/ComparisonBarChart";
 import { ComparisonCountrySlot } from "../components/comparison/ComparisonCountrySlot";
 import { ComparisonDetailTable } from "../components/comparison/ComparisonDetailTable";
-import { chartItems } from "../components/comparison/comparisonFormatters";
+import { ComparisonQuickMetrics } from "../components/comparison/ComparisonQuickMetrics";
+import {
+    chartItems,
+    densityValue,
+    formatDensity,
+} from "../components/comparison/comparisonFormatters";
 import { formatArea, formatPopulation } from "../utils/countryFormatters";
 
 export function ComparePage({
@@ -112,8 +117,20 @@ export function ComparePage({
                             description="Kilómetros cuadrados"
                             items={chartItems(selectedCountries, "area", formatArea)}
                         />
+                        <ComparisonBarChart
+                            icon={Gauge}
+                            title="Densidad poblacional"
+                            description="Habitantes por km²"
+                            items={chartItems(
+                                selectedCountries,
+                                densityValue,
+                                formatDensity,
+                            )}
+                        />
                     </section>
+                    <ComparisonQuickMetrics countries={selectedCountries} />
                     <ComparisonDetailTable
+                        allCountries={countries}
                         countries={selectedCountries}
                         onlyDifferences={onlyDifferences}
                         onOnlyDifferencesChange={setOnlyDifferences}

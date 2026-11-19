@@ -10,10 +10,11 @@ function valuesDiffer(values) {
 
 export function ComparisonDetailTable({
     countries,
+    allCountries,
     onlyDifferences,
     onOnlyDifferencesChange,
 }) {
-    const sections = comparisonRows(countries)
+    const sections = comparisonRows(countries, allCountries)
         .map((section) => ({
             ...section,
             rows: onlyDifferences
@@ -59,7 +60,11 @@ export function ComparisonDetailTable({
                     </thead>
                     <tbody>
                         {sections.map((section) => (
-                            <SectionRows key={section.title} section={section} />
+                            <SectionRows
+                                columnCount={countries.length + 1}
+                                key={section.title}
+                                section={section}
+                            />
                         ))}
                     </tbody>
                 </table>
@@ -73,11 +78,11 @@ export function ComparisonDetailTable({
     );
 }
 
-function SectionRows({ section }) {
+function SectionRows({ section, columnCount }) {
     return (
         <>
             <tr className="comparison-table-section">
-                <th colSpan="100%">{section.title}</th>
+                <th colSpan={columnCount}>{section.title}</th>
             </tr>
             {section.rows.map((row) => (
                 <tr key={row.label}>

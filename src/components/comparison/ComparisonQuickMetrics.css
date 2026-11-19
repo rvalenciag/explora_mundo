@@ -1,0 +1,128 @@
+.comparison-quick-metrics {
+    padding: 21px 20px 22px;
+    border: 1px solid #bed8f1;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(34, 70, 110, 0.06);
+}
+
+.comparison-quick-metrics .comparison-section-heading h2 {
+    font-size: var(--font-size-lg);
+}
+
+.comparison-quick-metric-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 19px;
+}
+
+.comparison-quick-metric {
+    padding: 14px;
+    border: 1px solid #b8d3ef;
+    border-radius: 10px;
+    background: #edf5ff;
+}
+
+.comparison-quick-metric.cyan {
+    border-color: #aedfef;
+    background: #e6f7fb;
+}
+
+.comparison-quick-metric.green {
+    border-color: #b9e5d2;
+    background: #e7f7f0;
+}
+
+.comparison-quick-metric > header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.comparison-quick-metric > header > span {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    color: #1e68d2;
+    background: rgba(255, 255, 255, 0.62);
+}
+
+.comparison-quick-metric.cyan > header > span {
+    color: #078cac;
+}
+
+.comparison-quick-metric.green > header > span {
+    color: #05956b;
+}
+
+.comparison-quick-metric > header svg {
+    width: 18px;
+    height: 18px;
+}
+
+.comparison-quick-metric > header strong,
+.comparison-quick-metric > header small {
+    display: block;
+}
+
+.comparison-quick-metric > header strong {
+    color: #284d7c;
+    font-size: var(--font-size-xs);
+}
+
+.comparison-quick-metric > header small {
+    margin-top: 3px;
+    color: #6381a0;
+    font-size: 10px;
+}
+
+.comparison-quick-metric-values {
+    display: grid;
+    gap: 6px;
+    margin-top: 13px;
+}
+
+.comparison-quick-metric-values > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: #28517e;
+    font-size: 11px;
+}
+
+.comparison-quick-metric-values > div > span {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    gap: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.comparison-quick-metric-values .country-flag-image,
+.comparison-quick-metric-values .country-flag {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 22px;
+    height: 15px;
+    overflow: hidden;
+    border-radius: 2px;
+    font-size: 13px;
+}
+
+.comparison-quick-metric-values strong {
+    color: #183f71;
+    font-size: var(--font-size-sm);
+}
+
+@media (max-width: 850px) {
+    .comparison-quick-metric-grid {
+        grid-template-columns: 1fr;
+    }
+}
