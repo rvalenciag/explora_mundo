@@ -1,10 +1,13 @@
 .hero-section {
-    min-height: 415px;
-    background: linear-gradient(108deg, #0c4b97 0%, #1264b4 43%, #078ec6 100%);
-    color: #fff;
     position: relative;
-    isolation: isolate;
+    width: min(1320px, calc(100% - 48px));
+    height: 480px;
+    margin: 40px auto 0;
     overflow: hidden;
+    border-radius: 28px;
+    background: linear-gradient(90deg, #0b347c 0%, #1450b5 48%, #237bfc 100%);
+    color: #fff;
+    isolation: isolate;
 }
 .hero-section::before {
     content: "";
@@ -32,83 +35,101 @@
     border: 1px solid rgba(157, 235, 246, 0.23);
     border-radius: 50%;
 }
+.hero-wave {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 1320px;
+    height: 122px;
+    pointer-events: none;
+}
 .hero-copy {
     position: relative;
     z-index: 3;
-    width: min(1320px, calc(100% - 48px));
-    margin: auto;
-    padding: 70px 0 62px;
+    width: 590px;
+    margin: 0;
+    padding: 70px 0 0 52px;
 }
 .eyebrow {
     display: inline-flex;
-    gap: 9px;
+    gap: 16px;
     align-items: center;
     padding: 0;
-    color: #b9edff;
-    font-size: var(--font-size-xs);
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    color: #eaf3ff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
 }
 .eyebrow-line {
     display: block;
-    width: 3px;
-    height: 18px;
-    border-radius: 2px;
-    background: #56e4ef;
+    width: 6px;
+    height: 28px;
+    border-radius: 3px;
+    background: #67e8f9;
 }
 .hero-copy h1 {
-    margin: 14px 0 12px;
-    font-family: var(--font-heading);
-    font-size: clamp(38px, 4.2vw, 57px);
-    line-height: 1.07;
-    letter-spacing: -0.035em;
+    margin: 28px 0 21px;
+    font-family: var(--font-ui);
+    font-size: 47px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: normal;
 }
 .hero-copy h1 em {
     color: #65e5f1;
+    display: block;
+    font-size: 54px;
     font-style: normal;
+    line-height: 66px;
 }
 .hero-copy p {
-    width: 490px;
+    width: 575px;
     max-width: 100%;
     margin: 0;
-    color: #d8edff;
-    font-size: var(--font-size-md);
-    line-height: 1.6;
+    color: #dae9ff;
+    font-size: 16.5px;
+    line-height: 27px;
 }
 .primary-button {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 21px;
     border: 0;
-    border-radius: 8px;
+    min-height: 60px;
+    border-radius: 13px;
     background: #fff;
-    color: #17509b;
-    padding: 13px 19px;
-    font-size: var(--font-size-sm);
-    font-weight: 700;
+    color: #1648b6;
+    padding: 0 28px;
+    font-size: 18px;
+    font-weight: 600;
     box-shadow: 0 7px 14px rgba(2, 37, 98, 0.18);
 }
 .primary-button:hover {
     transform: translateY(-1px);
 }
 .hero-button {
-    margin-top: 24px;
+    margin-top: 31px;
 }
 .primary-button svg {
-    width: 18px;
+    width: 24px;
 }
 .hero-globe {
     position: absolute;
     z-index: 4;
-    width: 400px;
-    height: 400px;
-    right: max(calc((100vw - 1320px) / 2 + 15px), 32px);
-    top: 14px;
+    width: 610px;
+    height: 480px;
+    right: 12px;
+    top: 0;
     filter: drop-shadow(0 14px 21px rgba(3, 49, 120, 0.21));
 }
 .globe-halo {
     position: absolute;
-    inset: 1px;
+    inset: auto;
+    top: 40px;
+    left: 153px;
+    width: 410px;
+    height: 410px;
     border-radius: 50%;
     background: radial-gradient(
         circle at 34% 32%,
@@ -120,7 +141,11 @@
 }
 .globe-sphere {
     position: absolute;
-    inset: 11px;
+    inset: auto;
+    top: 40px;
+    left: 153px;
+    width: 410px;
+    height: 410px;
     overflow: hidden;
     border: 1.5px solid rgba(186, 249, 247, 0.68);
     border-radius: 50%;
@@ -131,18 +156,6 @@
         rgba(5, 79, 160, 0.07)
     );
 }
-.globe-sphere::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    inset: 0;
-    background: radial-gradient(
-        ellipse at center,
-        transparent 50%,
-        rgba(1, 62, 143, 0.2) 100%
-    );
-    pointer-events: none;
-}
 .globe-sphere::after {
     content: "";
     position: absolute;
@@ -152,30 +165,18 @@
     box-shadow: inset -27px -12px 30px rgba(0, 67, 143, 0.2);
     pointer-events: none;
 }
-.globe-land {
+.figma-globe-art {
     position: absolute;
     z-index: 1;
-    inset: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(153, 238, 165, 0.85),
-        rgba(52, 194, 133, 0.66)
-    );
-    -webkit-mask: var(--world-map) center / contain no-repeat;
-    mask: var(--world-map) center / contain no-repeat;
-    opacity: 0.94;
+    top: -114px;
+    left: -60px;
 }
-.globe-graticule,
-.globe-border {
+.globe-routes {
     position: absolute;
     z-index: 2;
     inset: 0;
     width: 100%;
     height: 100%;
-}
-.globe-graticule {
-    stroke: rgba(206, 255, 245, 0.47);
-    stroke-width: 1.1;
 }
 .globe-route {
     fill: none;
@@ -189,10 +190,6 @@
 }
 .route-africa-south {
     animation: route-flow 2.4s linear 0.35s infinite;
-}
-.globe-border {
-    stroke: rgba(208, 255, 251, 0.6);
-    stroke-width: 1.6;
 }
 .map-pin {
     position: absolute;
@@ -219,18 +216,18 @@
     background: #fff;
 }
 .pin-north {
-    top: 47px;
-    left: 76px;
+    top: 40px;
+    left: 68px;
     color: #287fe0;
 }
 .pin-africa {
-    top: 156px;
-    left: 190px;
+    top: 134px;
+    left: 358px;
     color: #10ae93;
 }
 .pin-south {
-    top: 205px;
-    left: 61px;
+    top: 292px;
+    left: 149px;
     color: #22bc74;
 }
 @keyframes route-flow {
@@ -264,24 +261,33 @@
     transform: translateY(-1px);
 }
 .globe-action svg {
-    width: 42px;
-    height: 42px;
-    padding: 9px;
-    border-radius: 10px;
+    width: 54px;
+    height: 54px;
+    padding: 12px;
+    border-radius: 13px;
 }
 .compare-action {
-    top: 71px;
-    right: -8px;
-    min-width: 158px;
+    top: 83px;
+    right: 4px;
+    width: 212px;
+    min-height: 82px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    font-size: 18px;
 }
 .compare-action svg {
     color: #1cad75;
     background: #daf8e7;
 }
 .explore-action {
-    bottom: 38px;
-    left: -27px;
-    min-width: 143px;
+    top: 330px;
+    bottom: auto;
+    left: 6px;
+    width: 212px;
+    min-height: 82px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    font-size: 18px;
 }
 .explore-action svg {
     color: #2b72df;

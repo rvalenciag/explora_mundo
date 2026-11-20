@@ -1,10 +1,12 @@
 import "./Hero.css";
 import { ArrowRight } from "lucide-react";
+import heroWave from "../../assets/illustrations/hero-wave.svg";
 import { HeroGlobe } from "./HeroGlobe";
 
 export function Hero({ onExplore, onCompare }) {
     return (
         <section className="hero-section">
+            <img className="hero-wave" src={heroWave} alt="" aria-hidden="true" />
             <div className="hero-copy">
                 <span className="eyebrow">
                     <i className="eyebrow-line" aria-hidden="true"></i> EXPLORAMUNDO ·

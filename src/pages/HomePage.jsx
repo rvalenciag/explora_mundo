@@ -5,6 +5,7 @@ import { Hero } from "../components/home/Hero";
 import { RecentlyVisited } from "../components/home/RecentlyVisited";
 import { RegionExplorer } from "../components/home/RegionExplorer";
 import { StatCard } from "../components/common/StatCard";
+import { useFeaturedCountries } from "../hooks/useFeaturedCountries";
 import { formatPopulation, formatTotalArea } from "../utils/countryFormatters";
 
 export function HomePage({
@@ -23,10 +24,9 @@ export function HomePage({
         0,
     );
     const area = countries.reduce((total, country) => total + country.area, 0);
-    const featured = ["Bolivia", "Japón", "Canadá", "Francia"]
-        .map((name) => countries.find((country) => country.name === name))
-        .filter(Boolean);
-    const displayFeatured = featured.length === 4 ? featured : countries.slice(0, 4);
+    const featuredCountries = useFeaturedCountries(countries);
+    const displayFeatured =
+        featuredCountries.length === 4 ? featuredCountries : countries.slice(0, 4);
 
     return (
         <>

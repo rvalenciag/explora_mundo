@@ -1,30 +1,21 @@
 import { BarChart3, MapPin } from "lucide-react";
-import worldMap from "../../assets/illustrations/world-map.svg";
+import heroGlobe from "../../assets/illustrations/hero-globe.svg";
 
 export function HeroGlobe({ onExplore, onCompare }) {
     return (
         <div className="hero-globe">
             <div className="globe-halo"></div>
             <div className="globe-sphere">
-                <div
-                    className="globe-land"
-                    style={{ "--world-map": `url(${worldMap})` }}
-                ></div>
-                <svg className="globe-graticule" viewBox="0 0 500 500" fill="none">
-                    <ellipse cx="250" cy="250" rx="89" ry="226" />
-                    <ellipse cx="250" cy="250" rx="163" ry="226" />
-                    <path d="M24 147c126 57 326 57 452 0M24 250h452M24 353c126-57 326-57 452 0M45 95c115 52 295 52 410 0M45 405c115-52 295-52 410 0" />
+                <img className="figma-globe-art" src={heroGlobe} alt="" />
+                <svg className="globe-routes" viewBox="0 0 500 500" fill="none">
                     <path
                         className="globe-route route-north-africa"
-                        d="M128 125c100-31 192 19 151 143"
+                        d="M109 101C225 75 393 115 463 216"
                     />
                     <path
                         className="globe-route route-africa-south"
-                        d="M279 268c-30 55-91 72-171 64"
+                        d="M463 216C422 347 302 411 208 409"
                     />
-                </svg>
-                <svg className="globe-border" viewBox="0 0 500 500" fill="none">
-                    <circle cx="250" cy="250" r="226" />
                 </svg>
                 <span className="map-pin pin-north">
                     <MapPin />

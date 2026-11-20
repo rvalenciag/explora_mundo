@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1320" height="122" viewBox="0 0 1320 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Onda / SVG vectorial de fondo" clip-path="url(#clip0_0_43)">
+<path id="Vector" opacity="0.43" d="M0 8C140 132 350 149 540 68C720 -6 810 7 978 65C1122 114 1230 84 1320 12V122H0V8Z" fill="#087AF2"/>
+<path id="Vector_2" opacity="0.34" d="M0 39C170 152 395 129 560 92C708 58 820 67 1002 98C1122 117 1230 105 1320 36V122H0V39Z" fill="#0A56DB"/>
+</g>
+<defs>
+<clipPath id="clip0_0_43">
+<rect width="1320" height="122" fill="white"/>
+</clipPath>
+</defs>
+</svg>
