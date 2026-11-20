@@ -25,6 +25,14 @@
     font-size: var(--font-size-xs);
 }
 
+:root[data-theme="dark"] .statistics-page-heading h1 {
+    color: #e7f1ff;
+}
+
+:root[data-theme="dark"] .statistics-page-heading p {
+    color: #aac2de;
+}
+
 .statistics-notice {
     margin: 0;
     padding: 12px 15px;

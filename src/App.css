@@ -45,6 +45,16 @@
     --shadow: var(--shadow-float);
 }
 
+:root[data-theme="dark"] {
+    --color-page: #15233a;
+    --color-surface: #1e3049;
+    --color-text: #dceaff;
+    --color-text-strong: #ffffff;
+    --color-muted: #aac2de;
+    --color-line: #3c5a80;
+    --navy: #0b192d;
+}
+
 /* Global foundation only. Component styles live beside their components. */
 * {
     box-sizing: border-box;

@@ -74,6 +74,10 @@
     border: 1px solid rgba(255, 255, 255, 0.75);
     padding: 7px 13px;
 }
+.settings-button.active {
+    border-color: rgba(255, 255, 255, 0.9);
+    background: #2e70e9;
+}
 
 @media (max-width: 360px) {
     .site-header .nav-shell {

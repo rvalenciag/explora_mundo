@@ -19,3 +19,11 @@
     font-size: var(--font-size-sm);
     line-height: 1.4;
 }
+
+:root[data-theme="dark"] .page-intro h1 {
+    color: #e7f1ff;
+}
+
+:root[data-theme="dark"] .page-intro p {
+    color: #aac2de;
+}

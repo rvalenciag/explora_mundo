@@ -3,18 +3,22 @@ import { Navbar } from "./components/layout/Navbar";
 import { useCountries } from "./hooks/useCountries";
 import { useComparison } from "./hooks/useComparison";
 import { useFavorites } from "./hooks/useFavorites";
+import { useSettings } from "./hooks/useSettings";
 import { ExplorePage } from "./pages/ExplorePage";
 import { FavoritesPage } from "./pages/FavoritesPage";
 import { CountryProfilePage } from "./pages/CountryProfilePage";
 import { ComparePage } from "./pages/ComparePage";
 import { StatisticsPage } from "./pages/StatisticsPage";
 import { HomePage } from "./pages/HomePage";
+import { SettingsPage } from "./pages/SettingsPage";
 import "./App.css";
 import "./styles/responsive.css";
 
 function App() {
     const { countries, loading, error } = useCountries();
     const { favoriteCodes, toggleFavorite, clearFavorites } = useFavorites();
+    const { settings, setTheme, setCatalogView, setCatalogPageSize, resetSettings } =
+        useSettings();
     const {
         comparisonCodes,
         addCountry,
@@ -49,6 +53,10 @@ function App() {
                             favoriteCodes={favoriteCodes}
                             onToggleFavorite={toggleFavorite}
                             onAddToComparison={addCountry}
+                            defaultView={settings.catalogView}
+                            defaultPageSize={settings.catalogPageSize}
+                            onCatalogViewChange={setCatalogView}
+                            onCatalogPageSizeChange={setCatalogPageSize}
                         />
                     }
                 />
@@ -62,6 +70,10 @@ function App() {
                             favoriteCodes={favoriteCodes}
                             onToggleFavorite={toggleFavorite}
                             onAddToComparison={addCountry}
+                            defaultView={settings.catalogView}
+                            defaultPageSize={settings.catalogPageSize}
+                            onCatalogViewChange={setCatalogView}
+                            onCatalogPageSizeChange={setCatalogPageSize}
                         />
                     }
                 />
@@ -113,6 +125,18 @@ function App() {
                             favoriteCodes={favoriteCodes}
                             onToggleFavorite={toggleFavorite}
                             onClearFavorites={clearFavorites}
+                        />
+                    }
+                />
+                <Route
+                    path="/configuracion"
+                    element={
+                        <SettingsPage
+                            settings={settings}
+                            onThemeChange={setTheme}
+                            onCatalogViewChange={setCatalogView}
+                            onCatalogPageSizeChange={setCatalogPageSize}
+                            onReset={resetSettings}
                         />
                     }
                 />

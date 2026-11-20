@@ -38,3 +38,11 @@
 .recent-list small svg {
     width: 11px;
 }
+
+:root[data-theme="dark"] .recent-list strong {
+    color: #17345b;
+}
+
+:root[data-theme="dark"] .recent-list small {
+    color: #6e86a2;
+}

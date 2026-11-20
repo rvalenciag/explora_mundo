@@ -4,17 +4,19 @@
 .world-stats-heading {
     margin-bottom: 22px;
 }
-.world-stats-heading > span {
+.world-stats-heading h2 {
+    margin: 0;
     color: var(--text);
     font-family: var(--font-heading);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
     font-weight: 700;
+    line-height: 1.2;
 }
 .world-stats-heading p {
     margin: 6px 0 0;
     color: var(--muted);
     font-size: var(--font-size-sm);
-    line-height: 1.55;
+    line-height: 1.2;
 }
 .stat-grid {
     display: grid;

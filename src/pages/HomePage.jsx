@@ -42,7 +42,7 @@ export function HomePage({
                     <>
                         <section className="world-stats" aria-label="Cifras del mundo">
                             <div className="world-stats-heading">
-                                <span>Explora un mundo de información</span>
+                                <h2>Explora un mundo de información</h2>
                                 <p>
                                     Descubre las cifras que describen los países y
                                     territorios del planeta.

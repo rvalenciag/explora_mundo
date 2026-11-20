@@ -21,6 +21,10 @@ export function ExplorePage({
     favoriteCodes,
     onToggleFavorite,
     onAddToComparison,
+    defaultView,
+    defaultPageSize,
+    onCatalogViewChange,
+    onCatalogPageSizeChange,
 }) {
     const navigate = useNavigate();
     const location = useLocation();
@@ -40,9 +44,9 @@ export function ExplorePage({
         }),
         [filterValues, regionFromUrl],
     );
-    const [view, setView] = useState("grid");
+    const [view, setView] = useState(defaultView);
     const [page, setPage] = useState(1);
-    const [pageSize, setPageSize] = useState(12);
+    const [pageSize, setPageSize] = useState(defaultPageSize);
 
     const selectedCountry = countryCode
         ? countries.find(
@@ -131,11 +135,13 @@ export function ExplorePage({
 
     function changeView(nextView) {
         setView(nextView);
+        onCatalogViewChange(nextView);
         setPage(1);
     }
 
     function changePageSize(nextPageSize) {
         setPageSize(nextPageSize);
+        onCatalogPageSizeChange(nextPageSize);
         setPage(1);
     }
 

@@ -65,10 +65,16 @@ export function Navbar() {
                 </nav>
 
                 <div className="nav-settings">
-                    <button className="settings-button" type="button">
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? "settings-button active" : "settings-button"
+                        }
+                        to="/configuracion"
+                        onClick={() => window.scrollTo(0, 0)}
+                    >
                         <Settings2 aria-hidden="true" />
                         <span>Ajustes</span>
-                    </button>
+                    </NavLink>
                 </div>
             </div>
         </header>

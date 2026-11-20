@@ -31,6 +31,14 @@
     font-size: var(--font-size-sm);
 }
 
+:root[data-theme="dark"] .compare-page-heading h1 {
+    color: #e7f1ff;
+}
+
+:root[data-theme="dark"] .compare-page-heading p {
+    color: #aac2de;
+}
+
 .compare-selected-count {
     flex: 0 0 auto;
     padding: 9px 18px;

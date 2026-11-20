@@ -199,7 +199,7 @@
 .country-card-favorite.is-favorite {
     border-color: #d3e0eb;
     color: var(--color-primary);
-    background: var(--color-surface);
+    background: #fff;
 }
 .country-card-favorite.is-favorite svg {
     fill: currentColor;

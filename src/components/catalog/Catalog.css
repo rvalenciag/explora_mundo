@@ -139,6 +139,19 @@
     font-size: var(--font-size-xs);
     line-height: 1.2;
 }
+
+:root[data-theme="dark"] .catalog-active-label,
+:root[data-theme="dark"] .catalog-toolbar small {
+    color: #aac2de;
+}
+
+:root[data-theme="dark"] .catalog-toolbar strong {
+    color: #e7f1ff;
+}
+
+:root[data-theme="dark"] .clear-filters {
+    color: #73a9ff;
+}
 .catalog-display-controls {
     display: flex;
     align-items: center;

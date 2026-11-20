@@ -233,6 +233,21 @@
     border-color: #f0a3a9;
 }
 
+:root[data-theme="dark"] .favorites-heading > div > p,
+:root[data-theme="dark"] .favorites-results-heading > div > p {
+    color: #aac2de;
+}
+
+:root[data-theme="dark"] .favorites-summary h2,
+:root[data-theme="dark"] .favorites-storage strong,
+:root[data-theme="dark"] .favorites-state strong {
+    color: #17345b;
+}
+
+:root[data-theme="dark"] .favorites-search input::placeholder {
+    color: #aac2de;
+}
+
 @media (max-width: 900px) {
     .favorites-controls {
         grid-template-columns: minmax(0, 1fr) minmax(160px, 0.6fr);
