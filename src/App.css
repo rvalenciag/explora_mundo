@@ -4,6 +4,9 @@
 :root {
     --color-page: #edf5ff;
     --color-surface: #ffffff;
+    --color-surface-elevated: #ffffff;
+    --color-surface-muted: #f6faff;
+    --color-control: #ffffff;
     --color-text: #17345b;
     --color-text-strong: #11243f;
     --color-muted: #6e86a2;
@@ -11,6 +14,7 @@
     --color-primary-dark: #1848af;
     --color-navy: #203f91;
     --color-line: #cfdeef;
+    --color-border: #cfdeef;
 
     --font-body: "DM Sans", sans-serif;
     --font-ui: Inter, sans-serif;
@@ -48,10 +52,14 @@
 :root[data-theme="dark"] {
     --color-page: #15233a;
     --color-surface: #1e3049;
+    --color-surface-elevated: #263b58;
+    --color-surface-muted: #20344f;
+    --color-control: #29415f;
     --color-text: #dceaff;
     --color-text-strong: #ffffff;
     --color-muted: #aac2de;
     --color-line: #3c5a80;
+    --color-border: #466487;
     --navy: #0b192d;
 }
 

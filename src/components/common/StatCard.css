@@ -50,31 +50,31 @@
     opacity: 0.35;
 }
 .stat-card.green {
-    --stat-wave: #cbe8fa;
+    --stat-wave: #a9d4fb;
     --stat-label: #234c86;
     --stat-value: #193f79;
     --stat-detail: #667f9e;
     --stat-icon: #246bff;
     --stat-icon-background: rgba(72, 145, 255, 0.11);
-    background: linear-gradient(90deg, #f0f5fd, #dbedfb);
+    background: linear-gradient(90deg, #e1efff, #c5e2fb);
 }
 .stat-card.orange {
-    --stat-wave: #bfece7;
+    --stat-wave: #b9eadf;
     --stat-label: #24655f;
     --stat-value: #16675e;
     --stat-detail: #688b85;
-    --stat-icon: #0797b2;
+    --stat-icon: #07997e;
     --stat-icon-background: rgba(41, 191, 186, 0.12);
-    background: linear-gradient(90deg, #eaf8f4, #d2f2ee);
+    background: linear-gradient(90deg, #dcf6f0, #b9eadf);
 }
 .stat-card.purple {
-    --stat-wave: #d8e4f8;
-    --stat-label: #405c82;
-    --stat-value: #35527c;
-    --stat-detail: #70829a;
-    --stat-icon: #246bff;
+    --stat-wave: #d3dcfa;
+    --stat-label: #4e5fa4;
+    --stat-value: #3f5096;
+    --stat-detail: #7180aa;
+    --stat-icon: #596de2;
     --stat-icon-background: rgba(116, 143, 239, 0.1);
-    background: linear-gradient(90deg, #f2f5fa, #e4ecfa);
+    background: linear-gradient(90deg, #e9edff, #d3dcfa);
 }
 .stat-card-label {
     position: relative;
@@ -126,4 +126,44 @@
     font-size: var(--font-size-sm);
     font-weight: 400;
     line-height: 1.2;
+}
+
+:root[data-theme="dark"] .stat-card {
+    --stat-wave: #5aa7f3;
+    --stat-label: #e7f1ff;
+    --stat-value: #ffffff;
+    --stat-detail: #c9dcf5;
+    --stat-icon: #7edbff;
+    --stat-icon-background: rgba(102, 193, 255, 0.16);
+    background: linear-gradient(90deg, #1e4f9c, #2767e8);
+}
+
+:root[data-theme="dark"] .stat-card.green {
+    --stat-wave: #5d99d9;
+    --stat-label: #e7f1ff;
+    --stat-value: #ffffff;
+    --stat-detail: #c9dcf5;
+    --stat-icon: #8bb8ff;
+    --stat-icon-background: rgba(126, 177, 255, 0.14);
+    background: linear-gradient(90deg, #203d63, #294e7a);
+}
+
+:root[data-theme="dark"] .stat-card.orange {
+    --stat-wave: #4d9d90;
+    --stat-label: #e5fff8;
+    --stat-value: #ffffff;
+    --stat-detail: #c1eee2;
+    --stat-icon: #6de0c5;
+    --stat-icon-background: rgba(82, 208, 178, 0.14);
+    background: linear-gradient(90deg, #1f4b46, #286057);
+}
+
+:root[data-theme="dark"] .stat-card.purple {
+    --stat-wave: #756fae;
+    --stat-label: #f0efff;
+    --stat-value: #ffffff;
+    --stat-detail: #d3d0ff;
+    --stat-icon: #b2acff;
+    --stat-icon-background: rgba(158, 148, 255, 0.14);
+    background: linear-gradient(90deg, #393352, #4c4470);
 }

@@ -18,8 +18,8 @@
     grid-template-rows: auto auto minmax(0, 1fr) auto;
     width: min(500px, 100vw);
     overflow: hidden;
-    border-left: 1px solid #d4e2f0;
-    background: #fff;
+    border-left: 1px solid var(--color-border);
+    background: var(--color-surface-elevated);
     box-shadow: -12px 0 28px rgba(24, 54, 90, 0.16);
     animation: detail-drawer-in 0.22s ease-out;
 }
@@ -36,11 +36,11 @@
     height: 169px;
     overflow: hidden;
     background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.09) 13%, transparent 13%) 0 0 /
+        linear-gradient(145deg, rgba(255, 255, 255, 0.08) 13%, transparent 13%) 0 0 /
             52px 52px,
-        linear-gradient(45deg, rgba(255, 255, 255, 0.07) 18%, transparent 18%) 0 0 /
-            66px 66px,
-        linear-gradient(90deg, #0565b0, #057fb7 52%, #079dc1);
+        linear-gradient(45deg, rgba(7, 42, 103, 0.1) 18%, transparent 18%) 0 0 / 66px
+            66px,
+        linear-gradient(135deg, #1e4f9c 0%, #245ec5 53%, #2767e8 100%);
 }
 .country-detail-header-main {
     position: relative;
@@ -176,7 +176,7 @@
 }
 .detail-favorite.is-favorite {
     color: var(--color-primary);
-    background: var(--color-surface);
+    background: #fff;
 }
 .detail-favorite.is-favorite svg {
     fill: currentColor;
@@ -210,6 +210,9 @@
     width: 100%;
     height: 60px;
 }
+.country-detail-wave-surface {
+    fill: var(--color-surface-elevated);
+}
 .country-detail-tabs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -217,13 +220,13 @@
     margin: 12px 22px 0;
     padding: 3px;
     border-radius: 7px;
-    background: #edf4fb;
+    background: var(--color-surface-muted);
 }
 .country-detail-tabs button {
     height: 36px;
     border: 0;
     border-radius: 5px;
-    color: #385b83;
+    color: var(--color-muted);
     background: transparent;
     font-family: var(--font-ui);
     font-size: var(--font-size-sm);
@@ -239,7 +242,7 @@
 }
 .country-detail-section h2 {
     margin: 0 0 14px;
-    color: #17385f;
+    color: var(--color-text);
     font-family: var(--font-ui);
     font-size: var(--font-size-lg);
     font-weight: 700;
@@ -297,17 +300,17 @@
     justify-content: space-between;
     gap: 16px;
     min-height: 43px;
-    border-bottom: 1px solid #e2ebf4;
+    border-bottom: 1px solid var(--color-border);
 }
 .detail-rows dt {
-    color: #7890a9;
+    color: var(--color-muted);
     font-family: var(--font-ui);
     font-size: var(--font-size-sm);
 }
 .detail-rows dd {
     overflow: hidden;
     margin: 0;
-    color: #183b63;
+    color: var(--color-text);
     font-family: var(--font-ui);
     font-size: var(--font-size-sm);
     font-weight: 600;
@@ -319,8 +322,8 @@
     margin: 15px 0;
     padding: 14px;
     border-radius: 9px;
-    color: #315f8f;
-    background: #e2efff;
+    color: var(--color-text);
+    background: var(--color-surface-muted);
     font-family: var(--font-ui);
 }
 .detail-borders span {
@@ -340,10 +343,10 @@
     justify-content: center;
     gap: 8px;
     height: 42px;
-    border: 1px solid #cddff1;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
-    color: #245db4;
-    background: #e9f3ff;
+    color: var(--color-primary);
+    background: var(--color-control);
     font-family: var(--font-ui);
     font-size: var(--font-size-sm);
     font-weight: 600;
@@ -354,8 +357,8 @@
 }
 .country-detail-footer {
     padding: 14px 22px 10px;
-    border-top: 1px solid #dfebf4;
-    background: #fff;
+    border-top: 1px solid var(--color-border);
+    background: var(--color-surface-elevated);
 }
 .country-detail-footer > button {
     height: 42px;
@@ -366,9 +369,9 @@
 }
 .detail-compare {
     width: 34%;
-    border: 1px solid #c9def3;
-    color: #255ba7;
-    background: #e8f2ff;
+    border: 1px solid var(--color-border);
+    color: var(--color-primary);
+    background: var(--color-control);
 }
 .detail-full {
     width: calc(66% - 7px);
@@ -385,11 +388,27 @@
 .country-detail-footer small {
     display: block;
     margin-top: 9px;
-    color: #8195ab;
+    color: var(--color-muted);
     font-family: var(--font-ui);
     font-size: var(--font-size-xs);
     text-align: center;
 }
+:root[data-theme="dark"] .detail-metric.blue {
+    border-color: #42658d;
+    color: #78a8ff;
+    background: #243d60;
+}
+
+:root[data-theme="dark"] .detail-metric.green {
+    border-color: #397466;
+    color: #54d3ae;
+    background: #21433d;
+}
+
+:root[data-theme="dark"] .detail-metric strong {
+    color: var(--color-text);
+}
+
 @media (max-width: 600px) {
     .country-detail-drawer {
         top: 0;

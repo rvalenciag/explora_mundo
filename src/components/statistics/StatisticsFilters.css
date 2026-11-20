@@ -4,9 +4,9 @@
     gap: 13px;
     align-items: end;
     padding: 13px;
-    border: 1px solid #c6dcef;
+    border: 1px solid var(--color-border);
     border-radius: 12px;
-    background: #fff;
+    background: var(--color-surface-elevated);
     box-shadow: 0 4px 10px rgba(36, 72, 111, 0.06);
 }
 
@@ -16,7 +16,7 @@
 }
 
 .statistics-filters label > span:first-child {
-    color: #547396;
+    color: var(--color-muted);
     font-size: 10px;
     font-weight: 700;
 }
@@ -25,10 +25,10 @@
     width: 100%;
     min-height: 34px;
     padding: 0 10px;
-    border: 1px solid #bfd9f5;
+    border: 1px solid var(--color-border);
     border-radius: 7px;
-    color: #315c8d;
-    background: #f6faff;
+    color: var(--color-text);
+    background: var(--color-control);
     font-size: 11px;
 }
 
@@ -37,7 +37,7 @@
     align-items: center;
     gap: 8px;
     min-height: 34px;
-    color: #527293;
+    color: var(--color-muted);
     font-size: 11px;
     font-weight: 600;
     white-space: nowrap;

@@ -1,8 +1,8 @@
 .comparison-details-card {
     padding: 24px 20px 22px;
-    border: 1px solid #bed8f1;
+    border: 1px solid var(--color-border);
     border-radius: 14px;
-    background: #fff;
+    background: var(--color-surface-elevated);
     box-shadow: 0 4px 10px rgba(34, 70, 110, 0.06);
 }
 
@@ -10,7 +10,7 @@
     display: inline-flex;
     align-items: center;
     gap: 9px;
-    color: #506f91;
+    color: var(--color-muted);
     font-size: var(--font-size-xs);
     font-weight: 600;
     white-space: nowrap;
@@ -26,7 +26,7 @@
     width: 38px;
     height: 21px;
     border-radius: 999px;
-    background: #cfdef0;
+    background: var(--color-border);
 }
 
 .comparison-differences-toggle span::after {
@@ -58,7 +58,7 @@
     width: 100%;
     min-width: 680px;
     border-spacing: 0;
-    color: #1c416f;
+    color: var(--color-text);
     font-size: var(--font-size-xs);
 }
 
@@ -66,13 +66,13 @@
 .comparison-detail-table td {
     min-width: 155px;
     padding: 11px 14px;
-    border-bottom: 1px solid #dce8f4;
+    border-bottom: 1px solid var(--color-border);
     text-align: left;
 }
 
 .comparison-detail-table thead th {
-    color: #1f4778;
-    background: #e2eeff;
+    color: var(--color-text);
+    background: var(--color-surface-muted);
     font-size: var(--font-size-sm);
 }
 
@@ -122,30 +122,30 @@
 }
 
 .comparison-detail-table tbody th {
-    color: #365d8d;
+    color: var(--color-text);
     font-weight: 700;
 }
 
 .comparison-detail-table tbody td {
-    color: #244a78;
+    color: var(--color-text);
     font-weight: 500;
 }
 
 .comparison-detail-table tbody tr:not(.comparison-table-section):nth-child(odd) > * {
-    background: #f8fbff;
+    background: var(--color-surface-muted);
 }
 
 .comparison-detail-table .comparison-table-section th {
     padding: 9px 14px;
     border-bottom: 0;
     border-left: 4px solid #286be4;
-    color: #24578e;
-    background: #dceaff;
+    color: var(--color-text);
+    background: var(--color-surface-muted);
     font-size: var(--font-size-sm);
 }
 
 .comparison-no-differences {
     margin: 18px 0 0;
-    color: #607c9b;
+    color: var(--color-muted);
     font-size: var(--font-size-sm);
 }

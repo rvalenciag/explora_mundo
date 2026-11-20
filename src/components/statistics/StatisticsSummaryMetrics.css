@@ -75,3 +75,31 @@
     color: #7952c9;
     background: #eee5ff;
 }
+
+:root[data-theme="dark"] .statistics-summary-metrics .blue {
+    border-color: #42658d;
+    color: #78a8ff;
+    background: #243d60;
+}
+
+:root[data-theme="dark"] .statistics-summary-metrics .green {
+    border-color: #397466;
+    color: #54d3ae;
+    background: #21433d;
+}
+
+:root[data-theme="dark"] .statistics-summary-metrics .orange {
+    border-color: #806542;
+    color: #ffb75c;
+    background: #503c25;
+}
+
+:root[data-theme="dark"] .statistics-summary-metrics .purple {
+    border-color: #69568d;
+    color: #bb9bff;
+    background: #393152;
+}
+
+:root[data-theme="dark"] .statistics-summary-metrics article > span {
+    color: #dceaff;
+}

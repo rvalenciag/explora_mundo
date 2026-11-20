@@ -4,9 +4,9 @@
 .statistics-classifications,
 .statistics-data-table {
     padding: 20px;
-    border: 1px solid #bfd9f2;
+    border: 1px solid var(--color-border);
     border-radius: 13px;
-    background: #fff;
+    background: var(--color-surface-elevated);
     box-shadow: 0 4px 10px rgba(34, 70, 110, 0.06);
 }
 
@@ -37,14 +37,14 @@
 }
 
 .statistics-card-heading h2 {
-    color: #1b416f;
+    color: var(--color-text);
     font-family: var(--font-heading);
     font-size: var(--font-size-lg);
 }
 
 .statistics-card-heading p {
     margin-top: 3px;
-    color: #7189a4;
+    color: var(--color-muted);
     font-size: 10px;
 }
 
@@ -55,14 +55,14 @@
     margin-top: 13px;
     padding: 3px;
     border-radius: 8px;
-    background: #e4eefb;
+    background: var(--color-surface-muted);
 }
 
 .statistics-ranking > nav button {
     min-height: 28px;
     border: 0;
     border-radius: 6px;
-    color: #486c94;
+    color: var(--color-muted);
     background: transparent;
     font-size: 10px;
     font-weight: 700;
@@ -89,7 +89,7 @@
 }
 
 .statistics-rank-position {
-    color: #41668f;
+    color: var(--color-muted);
     font-size: 10px;
     font-weight: 700;
 }
@@ -109,7 +109,7 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    color: #214675;
+    color: var(--color-text);
     font-size: 10px;
 }
 
@@ -134,7 +134,7 @@
 .statistics-ranking-track {
     margin-top: 5px;
     overflow: hidden;
-    background: #e3edf8;
+    background: var(--color-surface-muted);
 }
 
 .statistics-ranking-track > span {

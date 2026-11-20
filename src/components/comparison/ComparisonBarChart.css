@@ -1,8 +1,8 @@
 .comparison-chart-card {
     padding: 21px 20px 22px;
-    border: 1px solid #bed8f1;
+    border: 1px solid var(--color-border);
     border-radius: 14px;
-    background: #fff;
+    background: var(--color-surface-elevated);
     box-shadow: 0 4px 10px rgba(34, 70, 110, 0.06);
 }
 
@@ -21,7 +21,7 @@
     justify-content: space-between;
     gap: 15px;
     margin-bottom: 6px;
-    color: #204471;
+    color: var(--color-text);
     font-size: var(--font-size-xs);
 }
 
@@ -43,7 +43,7 @@
 
 .comparison-bar-track {
     overflow: hidden;
-    background: #e6edf5;
+    background: var(--color-surface-muted);
 }
 
 .comparison-bar-value {

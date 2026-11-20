@@ -83,10 +83,10 @@
     max-width: 580px;
     margin: 34px auto 0;
     padding: 42px;
-    border: 1px dashed #b8d4ef;
+    border: 1px dashed var(--color-border);
     border-radius: 14px;
-    color: #66819f;
-    background: #f9fcff;
+    color: var(--color-muted);
+    background: var(--color-surface-elevated);
     text-align: center;
 }
 
@@ -103,7 +103,7 @@
 
 .comparison-empty-state h2 {
     margin-top: 13px;
-    color: #224873;
+    color: var(--color-text);
     font-family: var(--font-heading);
     font-size: var(--font-size-xl);
 }

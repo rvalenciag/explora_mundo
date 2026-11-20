@@ -172,16 +172,16 @@
     gap: 5px;
     margin: 22px 0 27px;
     padding: 5px;
-    border: 1px solid #d5e4f0;
+    border: 1px solid var(--color-border);
     border-radius: 12px;
-    background: #f9fcff;
+    background: var(--color-control);
 }
 
 .profile-tabs button {
     min-height: 43px;
     border: 0;
     border-radius: 8px;
-    color: #58708e;
+    color: var(--color-muted);
     background: transparent;
     font-size: var(--font-size-sm);
     font-weight: 700;
@@ -338,9 +338,9 @@
 }
 
 .profile-panel {
-    border: 1px solid #d5e4ef;
+    border: 1px solid var(--color-border);
     border-radius: 14px;
-    background: #fff;
+    background: var(--color-surface-elevated);
     box-shadow: 0 3px 8px rgba(37, 74, 114, 0.07);
 }
 
@@ -361,7 +361,7 @@
 .profile-panel-heading p,
 .profile-section-heading p {
     margin: 6px 0 0;
-    color: #647d97;
+    color: var(--color-muted);
     font-family: var(--font-body);
     font-size: var(--font-size-xs);
     line-height: 1.45;
@@ -377,7 +377,7 @@
     gap: 14px;
     align-items: center;
     min-height: 44px;
-    border-bottom: 1px solid #e2ecf5;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .profile-data-rows div:last-child {
@@ -385,7 +385,7 @@
 }
 
 .profile-data-rows dt {
-    color: #617992;
+    color: var(--color-muted);
     font-size: var(--font-size-xs);
     font-weight: 600;
 }
@@ -393,7 +393,7 @@
 .profile-data-rows dd {
     margin: 0;
     overflow-wrap: anywhere;
-    color: #193b63;
+    color: var(--color-text);
     font-size: var(--font-size-sm);
     font-weight: 700;
     text-align: right;
@@ -487,10 +487,10 @@
     min-width: 0;
     min-height: 76px;
     padding: 10px;
-    border: 1px solid #d3e3ef;
+    border: 1px solid var(--color-border);
     border-radius: 10px;
-    color: #1c416d;
-    background: #f9fcff;
+    color: var(--color-text);
+    background: var(--color-surface-muted);
     text-align: left;
 }
 
@@ -525,7 +525,7 @@
 
 .profile-border-countries small {
     margin-top: 4px;
-    color: #67819c;
+    color: var(--color-muted);
     font-size: 10px;
     font-weight: 700;
 }
@@ -550,7 +550,7 @@
     min-height: 72px;
     padding: 12px 10px 10px 48px;
     border-radius: 9px;
-    background: #eef6ff;
+    background: var(--color-surface-muted);
 }
 
 .profile-classifications svg {
@@ -568,14 +568,14 @@
 }
 
 .profile-classifications span {
-    color: #667e98;
+    color: var(--color-muted);
     font-size: 10px;
     font-weight: 600;
 }
 
 .profile-classifications strong {
     margin-top: 5px;
-    color: #173b66;
+    color: var(--color-text);
     font-size: var(--font-size-md);
 }
 
@@ -609,10 +609,10 @@
     gap: 7px;
     min-height: 38px;
     padding: 0 13px;
-    border: 1px solid #c7e1f4;
+    border: 1px solid var(--color-border);
     border-radius: 999px;
-    color: #1d629d;
-    background: #ebf6ff;
+    color: var(--color-text);
+    background: var(--color-surface-muted);
     font-size: var(--font-size-sm);
     font-weight: 700;
 }
@@ -625,7 +625,7 @@
 .profile-inline-note,
 .profile-api-note,
 .profile-source-note {
-    color: #55718e;
+    color: var(--color-muted);
     font-family: var(--font-body);
     font-size: var(--font-size-xs);
     line-height: 1.5;
@@ -636,7 +636,7 @@
     padding: 12px 14px;
     border-left: 4px solid #7bb7ed;
     border-radius: 0 8px 8px 0;
-    background: #f0f8ff;
+    background: var(--color-surface-muted);
 }
 
 .profile-convention-values {
@@ -649,7 +649,7 @@
 .profile-convention-values div {
     padding: 14px 16px;
     border-radius: 9px;
-    background: #f2f7fb;
+    background: var(--color-surface-muted);
 }
 
 .profile-convention-values span,
@@ -658,14 +658,14 @@
 }
 
 .profile-convention-values span {
-    color: #687f99;
+    color: var(--color-muted);
     font-size: var(--font-size-xs);
     font-weight: 600;
 }
 
 .profile-convention-values strong {
     margin-top: 5px;
-    color: #183b64;
+    color: var(--color-text);
     font-size: var(--font-size-md);
 }
 
@@ -673,9 +673,9 @@
 .profile-api-note {
     margin: 0;
     padding: 14px 17px;
-    border: 1px solid #cce2f5;
+    border: 1px solid var(--color-border);
     border-radius: 10px;
-    background: #f3f9ff;
+    background: var(--color-surface-muted);
 }
 
 .profile-api-note {
@@ -704,10 +704,10 @@
     gap: 10px;
     min-height: 73px;
     padding: 12px;
-    border: 1px solid #d3e3ef;
+    border: 1px solid var(--color-border);
     border-radius: 10px;
-    color: #1a548f;
-    background: #f9fcff;
+    color: var(--color-text);
+    background: var(--color-surface-muted);
     text-decoration: none;
 }
 
@@ -736,7 +736,7 @@
 
 .profile-reference-links small {
     margin-top: 4px;
-    color: #6d839b;
+    color: var(--color-muted);
     font-size: 10px;
 }
 

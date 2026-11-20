@@ -128,33 +128,33 @@
 }
 .region-card.aqua {
     --region-icon: #246bff;
-    --region-wave: #cbe8fa;
+    --region-wave: #a9d4fb;
     --region-accent: #234c86;
-    background: linear-gradient(90deg, #f0f5fd, #dbedfb);
+    background: linear-gradient(90deg, #e1efff, #c5e2fb);
 }
 .region-card.green {
     --region-icon: #0797b2;
-    --region-wave: #bfece7;
+    --region-wave: #b9eadf;
     --region-accent: #24655f;
-    background: linear-gradient(90deg, #eaf8f4, #d2f2ee);
+    background: linear-gradient(90deg, #dcf6f0, #b9eadf);
 }
 .region-card.orange {
     --region-icon: #df981f;
-    --region-wave: #fff7ea;
+    --region-wave: #fbe8c2;
     --region-accent: #b26c17;
-    background: #f8e5c5;
+    background: linear-gradient(90deg, #fae2b1, #f4cc85);
 }
 .region-card.ocean {
-    --region-icon: #246bff;
-    --region-wave: #cbe8fa;
-    --region-accent: #234c86;
-    background: linear-gradient(90deg, #f0f5fd, #dbedfb);
+    --region-icon: #0b93ae;
+    --region-wave: #b9e5f5;
+    --region-accent: #1a6787;
+    background: linear-gradient(90deg, #dcf3fb, #b9e5f5);
 }
 .region-card.purple {
-    --region-icon: #246bff;
-    --region-wave: #d8e4f8;
-    --region-accent: #405c82;
-    background: linear-gradient(90deg, #f2f5fa, #e4ecfa);
+    --region-icon: #596de2;
+    --region-wave: #d3dcfa;
+    --region-accent: #4e5fa4;
+    background: linear-gradient(90deg, #e9edff, #d3dcfa);
 }
 .region-card.orange .region-card-wave {
     opacity: 0.82;
@@ -164,4 +164,68 @@
 .region-card.ocean .region-card-wave,
 .region-card.purple .region-card-wave {
     opacity: 0.35;
+}
+
+:root[data-theme="dark"] .region-card.blue {
+    --region-icon: #2878df;
+    --region-wave: #5aa7f3;
+    background: linear-gradient(90deg, #1e4f9c, #2767e8);
+}
+
+:root[data-theme="dark"] .region-card.aqua {
+    --region-icon: #4e8eff;
+    --region-wave: #5d99d9;
+    --region-accent: #9bc5ff;
+    color: #e7f1ff;
+    background: linear-gradient(90deg, #203d63, #294e7a);
+}
+
+:root[data-theme="dark"] .region-card.green {
+    --region-icon: #25a9ba;
+    --region-wave: #4d9d90;
+    --region-accent: #78dfca;
+    color: #e5fff8;
+    background: linear-gradient(90deg, #1f4b46, #286057);
+}
+
+:root[data-theme="dark"] .region-card.orange {
+    --region-icon: #db981f;
+    --region-wave: #a9824c;
+    --region-accent: #ffd28b;
+    color: #fff5df;
+    background: linear-gradient(90deg, #554121, #6b5129);
+}
+
+:root[data-theme="dark"] .region-card.ocean {
+    --region-icon: #25a9ba;
+    --region-wave: #4d98ad;
+    --region-accent: #82d8ec;
+    color: #e5faff;
+    background: linear-gradient(90deg, #1e4758, #285c70);
+}
+
+:root[data-theme="dark"] .region-card.purple {
+    --region-icon: #8f88f5;
+    --region-wave: #756fae;
+    --region-accent: #c1bbff;
+    color: #f0efff;
+    background: linear-gradient(90deg, #393352, #4c4470);
+}
+
+:root[data-theme="dark"] .region-card.aqua .region-card-info > span,
+:root[data-theme="dark"] .region-card.green .region-card-info > span,
+:root[data-theme="dark"] .region-card.orange .region-card-info > span,
+:root[data-theme="dark"] .region-card.ocean .region-card-info > span,
+:root[data-theme="dark"] .region-card.purple .region-card-info > span,
+:root[data-theme="dark"] .region-card.aqua small,
+:root[data-theme="dark"] .region-card.green small,
+:root[data-theme="dark"] .region-card.orange small,
+:root[data-theme="dark"] .region-card.ocean small,
+:root[data-theme="dark"] .region-card.purple small {
+    color: color-mix(in srgb, currentColor 85%, transparent);
+}
+
+:root[data-theme="dark"] .region-card:not(.blue) .region-open {
+    color: currentColor;
+    background: rgba(255, 255, 255, 0.12);
 }

@@ -73,7 +73,7 @@
 
 .favorites-summary {
     margin: 36px 0 32px;
-    background: #dceafb;
+    background: var(--color-surface-muted);
     box-shadow: var(--shadow-card);
 }
 
@@ -85,7 +85,7 @@
     height: 52px;
     border-radius: var(--radius-md);
     color: var(--color-primary);
-    background: #f2f7ff;
+    background: var(--color-control);
 }
 
 .favorites-summary .favorites-panel-icon svg {
@@ -107,10 +107,10 @@
     gap: 10px;
     min-height: 50px;
     padding: 0 16px;
-    border: 1px solid #c4d8f2;
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     color: var(--color-text);
-    background: var(--color-surface);
+    background: var(--color-control);
     font-size: var(--font-size-sm);
 }
 
@@ -170,7 +170,7 @@
 
 .favorites-state {
     padding: 24px;
-    color: #486587;
+    color: var(--color-muted);
     font-size: var(--font-size-sm);
 }
 
@@ -183,7 +183,7 @@
 
 .favorites-storage {
     margin-top: 35px;
-    background: #f6faff;
+    background: var(--color-surface-elevated);
     box-shadow: var(--shadow-float);
     font-size: var(--font-size-sm);
 }
@@ -191,7 +191,7 @@
 .favorites-storage .favorites-panel-icon {
     width: 42px;
     height: 42px;
-    background: #e4efff;
+    background: var(--color-surface-muted);
 }
 
 .favorites-dialog {
@@ -241,7 +241,7 @@
 :root[data-theme="dark"] .favorites-summary h2,
 :root[data-theme="dark"] .favorites-storage strong,
 :root[data-theme="dark"] .favorites-state strong {
-    color: #17345b;
+    color: var(--color-text);
 }
 
 :root[data-theme="dark"] .favorites-search input::placeholder {

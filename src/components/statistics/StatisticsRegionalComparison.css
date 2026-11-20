@@ -6,14 +6,14 @@
     margin: 0 0 0 auto;
     padding: 3px;
     border-radius: 8px;
-    background: #e4eefb;
+    background: var(--color-surface-muted);
 }
 
 .statistics-regional-comparison .statistics-card-heading > nav button {
     min-height: 28px;
     border: 0;
     border-radius: 6px;
-    color: #486c94;
+    color: var(--color-muted);
     background: transparent;
     font-size: 10px;
     font-weight: 700;
@@ -32,7 +32,7 @@
     height: 143px;
     margin-top: 18px;
     padding: 0 15px;
-    border-bottom: 1px solid #d9e5f2;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .statistics-regional-bars > div {
@@ -46,7 +46,7 @@
 .statistics-regional-bars span {
     align-self: end;
     overflow: hidden;
-    color: #244b79;
+    color: var(--color-text);
     font-size: 10px;
     font-weight: 700;
     text-overflow: ellipsis;
@@ -62,7 +62,7 @@
 .statistics-regional-bars strong {
     align-self: center;
     overflow: hidden;
-    color: #365c86;
+    color: var(--color-muted);
     font-size: 10px;
     text-overflow: ellipsis;
     white-space: nowrap;

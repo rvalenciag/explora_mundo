@@ -33,16 +33,16 @@ export function CountryCard({
                 >
                     <path
                         d="M0 9C54-2 103 6 153 24c61 23 111 26 162-2v44H0Z"
-                        fill="#0a99bc"
+                        fill="#5aa7f3"
                     />
                     <path
                         d="M0 23c52-10 103-3 153 15 60 21 109 24 162-3v31H0Z"
-                        fill="#8fdceb"
+                        fill="#a9d4fb"
                         fillOpacity="0.82"
                     />
                     <path
                         d="M0 35c53-10 103-3 153 14 59 20 109 24 162-2v20H0Z"
-                        fill="#ffffff"
+                        className="country-card-wave-surface"
                     />
                 </svg>
             </header>

@@ -93,16 +93,16 @@ export function CountryDetailDrawer({
                     >
                         <path
                             d="M0 10C83-4 164 4 250 28c93 27 169 27 250-6v46H0Z"
-                            fill="#0a99bc"
+                            fill="#5aa7f3"
                         />
                         <path
                             d="M0 25c84-14 164-6 249 17 91 25 166 26 251-5v31H0Z"
-                            fill="#8fdceb"
+                            fill="#a9d4fb"
                             fillOpacity="0.82"
                         />
                         <path
                             d="M0 38c83-13 164-5 249 16 91 23 166 26 251-4v18H0Z"
-                            fill="#fff"
+                            className="country-detail-wave-surface"
                         />
                     </svg>
                 </header>

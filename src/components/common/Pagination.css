@@ -4,8 +4,8 @@
     place-content: center;
     gap: 8px;
     text-align: center;
-    background: #fff;
-    border: 1px dashed #b7cde4;
+    background: var(--color-surface-elevated);
+    border: 1px dashed var(--color-border);
     border-radius: 12px;
     color: var(--muted);
 }
@@ -28,10 +28,10 @@
 .pagination button {
     min-width: 31px;
     height: 31px;
-    border: 1px solid #c8d8ea;
+    border: 1px solid var(--color-border);
     border-radius: 6px;
-    color: #3d5d82;
-    background: #f8fbff;
+    color: var(--color-text);
+    background: var(--color-control);
     font-size: var(--font-size-xs);
 }
 .pagination button.selected {

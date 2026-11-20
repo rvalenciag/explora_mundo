@@ -3,9 +3,9 @@
     min-height: 161px;
     overflow: hidden;
     padding: 27px 16px 22px;
-    border: 1px solid #bfd7f2;
+    border: 1px solid var(--color-border);
     border-radius: 13px;
-    background: #fff;
+    background: var(--color-surface-elevated);
     box-shadow: 0 4px 10px rgba(34, 70, 110, 0.07);
 }
 
@@ -58,7 +58,7 @@
 
 .comparison-country-main strong {
     overflow: hidden;
-    color: #183a66;
+    color: var(--color-text);
     font-family: var(--font-heading);
     font-size: var(--font-size-xl);
     line-height: 1.1;
@@ -72,7 +72,7 @@
     gap: 4px;
     margin-top: 6px;
     overflow: hidden;
-    color: #63809f;
+    color: var(--color-muted);
     font-size: 10px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -92,8 +92,8 @@
     padding: 0;
     border: 0;
     border-radius: 50%;
-    color: #497098;
-    background: #edf4fc;
+    color: var(--color-muted);
+    background: var(--color-surface-muted);
 }
 
 .comparison-country-main button svg {
@@ -115,7 +115,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #1b4779;
+    color: var(--color-text);
     font-size: var(--font-size-xs);
     font-weight: 700;
 }
@@ -131,8 +131,8 @@
     align-content: center;
     gap: 9px;
     border-style: dashed;
-    color: #5d7998;
-    background: #f9fcff;
+    color: var(--color-muted);
+    background: var(--color-surface-muted);
 }
 
 .comparison-country-slot.is-empty::before {
@@ -140,6 +140,6 @@
 }
 
 .comparison-country-slot.is-empty strong {
-    color: #244b77;
+    color: var(--color-text);
     font-family: var(--font-heading);
 }

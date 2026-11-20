@@ -10,17 +10,17 @@
     align-items: center;
     min-height: 86px;
     padding: 0 22px;
-    border: 1px solid #cddcec;
+    border: 1px solid var(--color-border);
     border-radius: 13px;
-    background: #fff;
+    background: var(--color-surface-elevated);
     box-shadow: 0 3px 8px rgba(35, 65, 102, 0.04);
     transition:
         border-color 0.18s,
         background 0.18s;
 }
 .country-list-item:hover {
-    border-color: #aac8eb;
-    background: #fcfeff;
+    border-color: var(--color-primary);
+    background: var(--color-surface-muted);
 }
 .list-country-title {
     display: flex;
@@ -54,7 +54,7 @@
 .list-data strong {
     display: block;
     overflow: hidden;
-    color: #172e50;
+    color: var(--color-text);
     font-family: var(--font-ui);
     font-size: var(--font-size-sm);
     font-weight: 700;
@@ -63,7 +63,7 @@
     white-space: nowrap;
 }
 .list-country-title strong {
-    color: #142b4c;
+    color: var(--color-text);
     font-size: var(--font-size-md);
 }
 .list-country-title span,
@@ -71,7 +71,7 @@
     display: block;
     overflow: hidden;
     margin-top: 4px;
-    color: #8194ad;
+    color: var(--color-muted);
     font-family: var(--font-ui);
     font-size: var(--font-size-xs);
     font-weight: 400;
@@ -80,7 +80,7 @@
     white-space: nowrap;
 }
 .list-country-title span {
-    color: #58769b;
+    color: var(--color-muted);
     font-size: var(--font-size-xs);
 }
 .list-data {
@@ -89,7 +89,7 @@
     min-width: 0;
     min-height: 38px;
     padding: 0 20px;
-    border-left: 1px solid #dfe8f3;
+    border-left: 1px solid var(--color-border);
 }
 .list-iso {
     padding-right: 12px;
@@ -104,7 +104,7 @@
     padding: 0 11px;
     border-radius: 999px;
     color: #2466c7;
-    background: #e9f2ff;
+    background: var(--color-surface-muted);
     font-size: var(--font-size-xs);
     font-weight: 600;
 }
@@ -114,10 +114,10 @@
     width: 42px;
     height: 42px;
     padding: 0;
-    border: 1px solid #cddcec;
+    border: 1px solid var(--color-border);
     border-radius: 11px;
-    color: #173f70;
-    background: #fff;
+    color: var(--color-text);
+    background: var(--color-control);
 }
 .list-favorite svg {
     width: 21px;
@@ -125,9 +125,9 @@
     stroke-width: 1.9;
 }
 .list-favorite.is-favorite {
-    border-color: #cddcec;
+    border-color: var(--color-border);
     color: var(--color-primary);
-    background: var(--color-surface);
+    background: var(--color-control);
 }
 .list-favorite.is-favorite svg {
     fill: currentColor;
@@ -142,8 +142,8 @@
     margin-left: 16px;
     border: 0;
     border-radius: 11px;
-    color: #245bb0;
-    background: #e8f1fd;
+    color: var(--color-primary);
+    background: var(--color-surface-muted);
     font-family: var(--font-ui);
     font-size: var(--font-size-sm);
     font-weight: 600;
