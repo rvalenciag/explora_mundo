@@ -2,7 +2,6 @@ import "./HomePage.css";
 import { ChartNoAxesCombined, Globe2, LandPlot, UsersRound } from "lucide-react";
 import { FeaturedCountries } from "../components/home/FeaturedCountries";
 import { Hero } from "../components/home/Hero";
-import { RecentlyVisited } from "../components/home/RecentlyVisited";
 import { RegionExplorer } from "../components/home/RegionExplorer";
 import { StatCard } from "../components/common/StatCard";
 import { useFeaturedCountries } from "../hooks/useFeaturedCountries";
@@ -97,7 +96,6 @@ export function HomePage({
                             countries={countries}
                             onExplore={onExploreRegion}
                         />
-                        <RecentlyVisited countries={displayFeatured} />
                     </>
                 )}
             </main>

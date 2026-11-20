@@ -185,6 +185,9 @@ function normalizeCountry(country) {
     };
 }
 
+let countriesCache;
+let countriesPromise;
+
 async function fetchPage(url) {
     const response = await fetch(url, {
         headers: {
@@ -208,34 +211,45 @@ async function fetchPage(url) {
     };
 }
 
-export async function fetchCountries(query = "") {
+export function fetchCountries(query = "") {
     if (!baseUrl || !apiKey) {
         throw new Error(
             "Configura VITE_REST_COUNTRIES_BASE_URL y VITE_REST_COUNTRIES_API_KEY en .env.",
         );
     }
 
-    const url = new URL(baseUrl);
     if (query.trim()) {
+        const url = new URL(baseUrl);
         url.searchParams.set("q", query.trim());
-        const result = await fetchPage(url);
-        return result.countries.map(normalizeCountry);
+        return fetchPage(url).then((result) => result.countries.map(normalizeCountry));
     }
 
-    const countries = [];
-    let offset = 0;
-    const limit = 100;
-    let more = true;
+    if (countriesCache) return Promise.resolve(countriesCache);
+    if (countriesPromise) return countriesPromise;
 
-    while (more) {
-        const pageUrl = new URL(url);
-        pageUrl.searchParams.set("limit", limit);
-        pageUrl.searchParams.set("offset", offset);
-        const result = await fetchPage(pageUrl);
-        countries.push(...result.countries);
-        more = Boolean(result.meta?.more);
-        offset += result.countries.length;
-    }
+    const url = new URL(baseUrl);
+    countriesPromise = (async () => {
+        const countries = [];
+        let offset = 0;
+        const limit = 100;
+        let more = true;
 
-    return countries.map(normalizeCountry);
+        while (more) {
+            const pageUrl = new URL(url);
+            pageUrl.searchParams.set("limit", limit);
+            pageUrl.searchParams.set("offset", offset);
+            const result = await fetchPage(pageUrl);
+            countries.push(...result.countries);
+            more = Boolean(result.meta?.more);
+            offset += result.countries.length;
+        }
+
+        countriesCache = countries.map(normalizeCountry);
+        return countriesCache;
+    })().catch((error) => {
+        countriesPromise = undefined;
+        throw error;
+    });
+
+    return countriesPromise;
 }

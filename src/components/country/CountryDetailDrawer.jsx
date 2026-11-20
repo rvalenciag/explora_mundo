@@ -1,5 +1,5 @@
 import "./CountryDetailDrawer.css";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
     ArrowRight,
     Clock3,
@@ -31,6 +31,18 @@ export function CountryDetailDrawer({
     onCompare,
 }) {
     const [activeTab, setActiveTab] = useState("General");
+    const closeButtonRef = useRef(null);
+
+    useEffect(() => {
+        closeButtonRef.current?.focus();
+
+        function handleKeyDown(event) {
+            if (event.key === "Escape") onClose?.();
+        }
+
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [onClose]);
 
     return (
         <>
@@ -40,11 +52,17 @@ export function CountryDetailDrawer({
                 onClick={onClose}
                 aria-label="Cerrar detalle de país"
             />
-            <aside className="country-detail-drawer" aria-label="Detalle del país">
+            <aside
+                className="country-detail-drawer"
+                role="dialog"
+                aria-modal="true"
+                aria-label="Detalle del país"
+            >
                 <header className="country-detail-header">
                     <button
                         className="country-detail-close"
                         type="button"
+                        ref={closeButtonRef}
                         onClick={onClose}
                         aria-label="Cerrar detalle de país"
                     >
@@ -80,7 +98,7 @@ export function CountryDetailDrawer({
                             }
                             type="button"
                             onClick={() => onToggleFavorite(country.cca3)}
-                            aria-label={`Añadir ${country.name} a favoritos`}
+                            aria-label={`${favorite ? "Quitar" : "Añadir"} ${country.name} ${favorite ? "de" : "a"} favoritos`}
                         >
                             <Heart aria-hidden="true" />
                         </button>

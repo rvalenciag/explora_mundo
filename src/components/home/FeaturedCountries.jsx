@@ -1,5 +1,6 @@
 import { CountryCard } from "../country/CountryCard";
 import { SectionHeader } from "../common/SectionHeader";
+import { Link } from "react-router-dom";
 
 export function FeaturedCountries({
     countries,
@@ -13,9 +14,13 @@ export function FeaturedCountries({
                 title="Países destacados"
                 description="Una selección para descubrir países interesantes."
                 action={
-                    <button type="button" className="text-button">
-                        Ver todos
-                    </button>
+                    <Link
+                        to="/explorar"
+                        className="text-button"
+                        onClick={() => window.scrollTo(0, 0)}
+                    >
+                        Ver todos los países
+                    </Link>
                 }
             />
             <div className="country-grid featured-grid">
