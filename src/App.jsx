@@ -159,6 +159,11 @@ function HomeRoute({ countries, loading, error, favoriteCodes, onToggleFavorite 
         window.scrollTo(0, 0);
     }
 
+    function openCompare() {
+        navigate("/comparar");
+        window.scrollTo(0, 0);
+    }
+
     return (
         <HomePage
             countries={countries}
@@ -167,6 +172,7 @@ function HomeRoute({ countries, loading, error, favoriteCodes, onToggleFavorite 
             favoriteCodes={favoriteCodes}
             onToggleFavorite={onToggleFavorite}
             onExplore={openExplore}
+            onCompare={openCompare}
             onExploreCountry={(country) => openExplore({ country })}
             onExploreRegion={(region) => openExplore({ region })}
         />

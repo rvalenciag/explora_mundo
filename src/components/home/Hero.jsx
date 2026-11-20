@@ -2,7 +2,7 @@ import "./Hero.css";
 import { ArrowRight } from "lucide-react";
 import { HeroGlobe } from "./HeroGlobe";
 
-export function Hero({ onExplore }) {
+export function Hero({ onExplore, onCompare }) {
     return (
         <section className="hero-section">
             <div className="hero-copy">
@@ -27,7 +27,7 @@ export function Hero({ onExplore }) {
                     Comenzar a explorar <ArrowRight aria-hidden="true" />
                 </button>
             </div>
-            <HeroGlobe onExplore={onExplore} />
+            <HeroGlobe onExplore={onExplore} onCompare={onCompare} />
         </section>
     );
 }

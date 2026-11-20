@@ -14,6 +14,7 @@ export function HomePage({
     favoriteCodes,
     onToggleFavorite,
     onExplore,
+    onCompare,
     onExploreCountry,
     onExploreRegion,
 }) {
@@ -29,7 +30,7 @@ export function HomePage({
 
     return (
         <>
-            <Hero onExplore={onExplore} />
+            <Hero onExplore={onExplore} onCompare={onCompare} />
             <main className="page-shell home-page">
                 {loading && <HomeLoading />}
                 {!loading && error && (

@@ -1,7 +1,7 @@
 import { BarChart3, MapPin } from "lucide-react";
 import worldMap from "../../assets/illustrations/world-map.svg";
 
-export function HeroGlobe({ onExplore }) {
+export function HeroGlobe({ onExplore, onCompare }) {
     return (
         <div className="hero-globe">
             <div className="globe-halo"></div>
@@ -39,14 +39,18 @@ export function HeroGlobe({ onExplore }) {
                     <i></i>
                 </span>
             </div>
-            <div className="globe-action compare-action">
+            <button
+                className="globe-action compare-action"
+                type="button"
+                onClick={onCompare}
+            >
                 <BarChart3 />
                 <span>
                     Compara
                     <br />
                     países
                 </span>
-            </div>
+            </button>
             <button
                 className="globe-action explore-action"
                 type="button"
