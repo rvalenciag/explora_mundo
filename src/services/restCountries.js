@@ -187,6 +187,44 @@ function normalizeCountry(country) {
 
 let countriesCache;
 let countriesPromise;
+const countriesStorageKey = "exploramundo:countries:v1";
+const countriesCacheDuration = 60 * 60 * 1000;
+
+function readCountriesCache() {
+    try {
+        const cached = JSON.parse(
+            window.localStorage.getItem(countriesStorageKey) ?? "null",
+        );
+
+        if (
+            Array.isArray(cached?.countries) &&
+            cached.countries.length > 0 &&
+            cached.expiresAt > Date.now()
+        ) {
+            return cached.countries;
+        }
+    } catch {
+        // Si el almacenamiento no está disponible o los datos no son válidos,
+        // se continúa con la carga normal desde la API.
+    }
+
+    return null;
+}
+
+function writeCountriesCache(countries) {
+    try {
+        window.localStorage.setItem(
+            countriesStorageKey,
+            JSON.stringify({
+                countries,
+                expiresAt: Date.now() + countriesCacheDuration,
+            }),
+        );
+    } catch {
+        // La aplicación sigue funcionando aunque el almacenamiento esté lleno
+        // o no disponible.
+    }
+}
 
 async function fetchPage(url) {
     const response = await fetch(url, {
@@ -227,6 +265,12 @@ export function fetchCountries(query = "") {
     if (countriesCache) return Promise.resolve(countriesCache);
     if (countriesPromise) return countriesPromise;
 
+    const storedCountries = readCountriesCache();
+    if (storedCountries) {
+        countriesCache = storedCountries;
+        return Promise.resolve(countriesCache);
+    }
+
     const url = new URL(baseUrl);
     countriesPromise = (async () => {
         const countries = [];
@@ -245,6 +289,7 @@ export function fetchCountries(query = "") {
         }
 
         countriesCache = countries.map(normalizeCountry);
+        writeCountriesCache(countriesCache);
         return countriesCache;
     })().catch((error) => {
         countriesPromise = undefined;
